@@ -1,0 +1,4 @@
+vhdtdtfi -prj adc_12bit -o G:/reinfold/adc_stp/StepperMotor.tfi -module StepperMotor -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror -lib work st_mtr.vhd 
+vhdtdtfi -prj adc_12bit -o G:/reinfold/adc_stp/StepperMotor.tfi -module StepperMotor -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror -lib work st_mtr.vhd 
+vhdtdtfi -prj adc_12bit -o G:/reinfold/adc_stp/StepperMotor.tfi -module StepperMotor -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror -lib work st_mtr.vhd 
+vhdtdtfi -prj adc_12bit -o G:/reinfold/adc_stp/StepperMotor.vhi -module StepperMotor -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work st_mtr.vhd 

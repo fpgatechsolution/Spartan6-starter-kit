@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=E:\KITCODE\reinfold\adc_stp\TOP.ncd
+OUTFILE=E:\KITCODE\reinfold\adc_stp\TOP.bit
+FAMILY=Spartan6
+PART=xc6slx9-2tqg144
+WORKINGDIR=E:\KITCODE\reinfold\adc_stp
+LICENSE=WebPack
+USER_INFO=__0_0_0

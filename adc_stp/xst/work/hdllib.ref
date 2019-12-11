@@ -1,0 +1,14 @@
+AR steppermotor bhe H:/reinfold/adc_stp/st_mtr.vhd sub00/vhpl11 1507653783
+EN lcd NULL H:/reinfold/adc_stp/LCD_CNTROL.vhd sub00/vhpl04 1507653778
+EN dcm NULL H:/reinfold/adc_stp/dcm.vhd sub00/vhpl02 1507653776
+MO P2S NULL P2S.v vlg1D/_p2_s.bin 1507653776
+AR sipo_code behavioral H:/reinfold/adc_stp/sipo.vhd sub00/vhpl01 1507653775
+EN steppermotor NULL H:/reinfold/adc_stp/st_mtr.vhd sub00/vhpl10 1507653782
+MO binbcd16 NULL bintobcd.v vlg39/binbcd16.bin 1507653776
+AR dcm behavioral H:/reinfold/adc_stp/dcm.vhd sub00/vhpl03 1507653777
+EN top NULL H:/reinfold/adc_stp/top.vhd sub00/vhpl08 1507653784
+AR top behavioral H:/reinfold/adc_stp/top.vhd sub00/vhpl09 1507653785
+AR lcd a H:/reinfold/adc_stp/LCD_CNTROL.vhd sub00/vhpl05 1507653779
+EN adc NULL H:/reinfold/adc_stp/adc.vhd sub00/vhpl06 1507653780
+AR adc behavioral H:/reinfold/adc_stp/adc.vhd sub00/vhpl07 1507653781
+EN sipo_code NULL H:/reinfold/adc_stp/sipo.vhd sub00/vhpl00 1507653774

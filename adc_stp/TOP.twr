@@ -1,0 +1,92 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 2 -n
+3 -fastpaths -xml TOP.twx TOP.ncd -o TOP.twr TOP.pcf -ucf top.ucf
+
+Design file:              TOP.ncd
+Physical constraint file: TOP.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-2 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock CLK_12MHZ
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+RESET       |    6.846(R)|      SLOW  |   -2.865(R)|      FAST  |CLK_12MH_BUFG     |   0.000|
+            |    3.846(R)|      SLOW  |   -1.209(R)|      FAST  |clk_1mh           |   0.000|
+SLIDE_SW<0> |    1.779(R)|      SLOW  |   -0.460(R)|      FAST  |CLK_12MH_BUFG     |   0.000|
+SLIDE_SW<1> |    1.498(R)|      SLOW  |   -0.073(R)|      SLOW  |CLK_12MH_BUFG     |   0.000|
+SLIDE_SW<2> |    1.718(R)|      SLOW  |    0.157(R)|      SLOW  |CLK_12MH_BUFG     |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock CLK_12MHZ to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+CS_ADC      |        11.679(R)|      SLOW  |         4.938(R)|      FAST  |clk_1mh           |   0.000|
+LED<0>      |        10.461(R)|      SLOW  |         4.454(R)|      FAST  |CLK_12MH_BUFG     |   0.000|
+LED<1>      |        10.012(R)|      SLOW  |         4.237(R)|      FAST  |CLK_12MH_BUFG     |   0.000|
+LED<2>      |        10.076(R)|      SLOW  |         4.236(R)|      FAST  |CLK_12MH_BUFG     |   0.000|
+LED<3>      |         9.646(R)|      SLOW  |         3.985(R)|      FAST  |CLK_12MH_BUFG     |   0.000|
+SCK         |        13.895(R)|      SLOW  |         6.080(R)|      FAST  |clk_1mh           |   0.000|
+StepDrive<0>|         9.453(R)|      SLOW  |         3.900(R)|      FAST  |CLK_12MH_BUFG     |   0.000|
+StepDrive<1>|         9.606(R)|      SLOW  |         3.982(R)|      FAST  |CLK_12MH_BUFG     |   0.000|
+StepDrive<2>|         9.320(R)|      SLOW  |         3.853(R)|      FAST  |CLK_12MH_BUFG     |   0.000|
+StepDrive<3>|         9.319(R)|      SLOW  |         3.852(R)|      FAST  |CLK_12MH_BUFG     |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock CLK_12MHZ
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_12MHZ      |    3.767|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+RESET          |LED<7>         |    9.719|
+SLIDE_SW<0>    |LED<4>         |    7.543|
+SLIDE_SW<1>    |LED<5>         |    7.232|
+SLIDE_SW<2>    |LED<6>         |    7.362|
+---------------+---------------+---------+
+
+
+Analysis completed Tue Dec 10 22:54:54 2019 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 173 MB
+
+
+

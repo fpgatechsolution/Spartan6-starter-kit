@@ -1,0 +1,6 @@
+vhdl work "H:\reinfold\adc_stp\sipo.vhd"
+vhdl work "H:\reinfold\adc_stp\st_mtr.vhd"
+vhdl work "H:\reinfold\adc_stp\LCD_CNTROL.vhd"
+vhdl work "H:\reinfold\adc_stp\dcm.vhd"
+vhdl work "H:\reinfold\adc_stp\adc.vhd"
+vhdl work "H:\reinfold\adc_stp\top.vhd"

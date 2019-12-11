@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=E:\KITCODE\reinfold\dac test\DAC\top.ncd
+OUTFILE=E:\KITCODE\reinfold\dac test\DAC\top.bit
+FAMILY=Spartan6
+PART=xc6slx9-3tqg144
+WORKINGDIR=E:\KITCODE\reinfold\dac test\DAC
+LICENSE=WebPack
+USER_INFO=__0_0_0

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "E:/nish/KITCODE/lcd_3a_200a/adc3204 - Copy/lcd_3a_adc3204/adc_12bit/SIPO_code_isim_beh.exe" -prj "E:/nish/KITCODE/lcd_3a_200a/adc3204 - Copy/lcd_3a_adc3204/adc_12bit/SIPO_code_beh.prj" "work.SIPO_code" 

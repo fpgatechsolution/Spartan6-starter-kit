@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=E:\GIT\spartan6 starter kit\sp6_star_board_test\TOP.ncd
+OUTFILE=E:\GIT\spartan6 starter kit\sp6_star_board_test\TOP.bit
+FAMILY=Spartan6
+PART=xc6slx9-2tqg144
+WORKINGDIR=E:\GIT\spartan6 starter kit\sp6_star_board_test
+LICENSE=WebPack
+USER_INFO=__0_0_0

@@ -1,0 +1,13 @@
+
+
+
+// Instantiate the module
+StepperMotor instance_name (
+    .StepDrive(StepDrive), 
+    .clock(clock), 
+    .Direction(Direction), 
+    .StepEnable(StepEnable), 
+    .ProvideStaticHolding(ProvideStaticHolding)
+    );
+
+

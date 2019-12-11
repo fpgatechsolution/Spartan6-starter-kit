@@ -1,0 +1,19 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -o E:/nish/KITCODE/lcd_3a_200a/adc3204 - Copy/lcd_3a_adc3204/adc_12bit/SIPO_code_isim_beh.exe -prj E:/nish/KITCODE/lcd_3a_200a/adc3204 - Copy/lcd_3a_adc3204/adc_12bit/SIPO_code_beh.prj work.SIPO_code 
+ISim P.20131013 (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "E:/nish/KITCODE/lcd_3a_200a/adc3204 - Copy/lcd_3a_adc3204/adc_12bit/sipo.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 167420 KB
+Fuse CPU Usage: 264 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package vcomponents
+Compiling architecture behavioral of entity sipo_code
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+ERROR:Simulator:861 - Failed to link the design

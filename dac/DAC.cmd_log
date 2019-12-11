@@ -1,0 +1,1 @@
+vhdtdtfi -prj DAC -o D:/DAC/DAC.vhi -lib work D:/DAC//DAC.vhd -module DAC -template C:/Xilinx/14.6/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror 

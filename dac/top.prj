@@ -1,0 +1,6 @@
+verilog work "P2S.v"
+vhdl work "SEVEN_SIGMENT.vhd"
+vhdl work "LCD_CNTROL.vhd"
+vhdl work "DAC.vhd"
+verilog work "bintobcd.v"
+vhdl work "top.vhd"

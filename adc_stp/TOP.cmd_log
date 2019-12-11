@@ -1,0 +1,40 @@
+xst -intstyle ise -ifn "E:/nish/KITCODE/lcd_3a_200a/adc3204 - Copy/lcd_3a_adc3204/adc_12bit/TOP.xst" -ofn "E:/nish/KITCODE/lcd_3a_200a/adc3204 - Copy/lcd_3a_adc3204/adc_12bit/TOP.syr" 
+xst -intstyle ise -ifn "E:/nish/KITCODE/lcd_3a_200a/adc3204 - Copy/lcd_3a_adc3204/adc_12bit/TOP.xst" -ofn "E:/nish/KITCODE/lcd_3a_200a/adc3204 - Copy/lcd_3a_adc3204/adc_12bit/TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -p xc3s200a-vq100-4 "TOP.ngc" TOP.ngd  
+map -intstyle ise -p xc3s200a-vq100-4 -cm area -ir off -pr off -c 100 -o TOP_map.ncd TOP.ngd TOP.pcf 
+par -w -intstyle ise -ol high -t 1 TOP_map.ncd TOP.ncd TOP.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml TOP.twx TOP.ncd -o TOP.twr TOP.pcf -ucf top.ucf 
+bitgen -intstyle ise -f TOP.ut TOP.ncd 
+xst -intstyle ise -ifn "G:/reinfold/adc_stp/TOP.xst" -ofn "G:/reinfold/adc_stp/TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc top.ucf -p xc3s200a-vq100-4 TOP.ngc TOP.ngd  
+map -intstyle ise -p xc3s200a-vq100-4 -cm area -ir off -pr off -c 100 -o TOP_map.ncd TOP.ngd TOP.pcf 
+par -w -intstyle ise -ol high -t 1 TOP_map.ncd TOP.ncd TOP.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml TOP.twx TOP.ncd -o TOP.twr TOP.pcf -ucf top.ucf 
+bitgen -intstyle ise -f TOP.ut TOP.ncd 
+xst -intstyle ise -ifn "H:/reinfold/adc_stp/TOP.xst" -ofn "H:/reinfold/adc_stp/TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc top.ucf -p xc3s200a-vq100-4 TOP.ngc TOP.ngd  
+map -intstyle ise -p xc3s200a-vq100-4 -cm area -ir off -pr off -c 100 -o TOP_map.ncd TOP.ngd TOP.pcf 
+par -w -intstyle ise -ol high -t 1 TOP_map.ncd TOP.ncd TOP.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml TOP.twx TOP.ncd -o TOP.twr TOP.pcf -ucf top.ucf 
+bitgen -intstyle ise -f TOP.ut TOP.ncd 
+xst -intstyle ise -ifn "G:/reinfold/adc_stp/TOP.xst" -ofn "G:/reinfold/adc_stp/TOP.syr" 
+xst -intstyle ise -ifn "G:/reinfold/adc_stp/TOP.xst" -ofn "G:/reinfold/adc_stp/TOP.syr" 
+xst -intstyle ise -ifn "G:/reinfold/adc_stp/TOP.xst" -ofn "G:/reinfold/adc_stp/TOP.syr" 
+xst -intstyle ise -ifn "G:/reinfold/adc_stp/TOP.xst" -ofn "G:/reinfold/adc_stp/TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc top.ucf -p xc6slx9-tqg144-2 TOP.ngc TOP.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TOP_map.ncd TOP.ngd TOP.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc top.ucf -p xc6slx9-tqg144-2 TOP.ngc TOP.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TOP_map.ncd TOP.ngd TOP.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc top.ucf -p xc6slx9-tqg144-2 TOP.ngc TOP.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TOP_map.ncd TOP.ngd TOP.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc top.ucf -p xc6slx9-tqg144-2 TOP.ngc TOP.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TOP_map.ncd TOP.ngd TOP.pcf 
+par -w -intstyle ise -ol high -mt off TOP_map.ncd TOP.ncd TOP.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml TOP.twx TOP.ncd -o TOP.twr TOP.pcf -ucf top.ucf 
+bitgen -intstyle ise -f TOP.ut TOP.ncd 
+xst -intstyle ise -ifn "E:/KITCODE/reinfold/adc_stp/TOP.xst" -ofn "E:/KITCODE/reinfold/adc_stp/TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc top.ucf -p xc6slx9-tqg144-2 TOP.ngc TOP.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TOP_map.ncd TOP.ngd TOP.pcf 
+par -w -intstyle ise -ol high -mt off TOP_map.ncd TOP.ncd TOP.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml TOP.twx TOP.ncd -o TOP.twr TOP.pcf -ucf top.ucf 
+bitgen -intstyle ise -f TOP.ut TOP.ncd 

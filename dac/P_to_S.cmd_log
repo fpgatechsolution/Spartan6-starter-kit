@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj DAC -o "E:/KITCODE/reinfold/dac test/DAC/P_to_S.vhi" -lib work "E:/KITCODE/reinfold/dac test/DAC//P2S.v" -module P_to_S -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror 

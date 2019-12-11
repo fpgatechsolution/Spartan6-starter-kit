@@ -1,0 +1,152 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+LIBRARY UNISIM;
+USE UNISIM.VCOMPONENTS.ALL;
+
+entity adc is
+    Port ( clk_12,reset : in  STD_LOGIC;
+           sck,cs : out  STD_LOGIC;
+           adc_in  : in  STD_LOGIC;
+			  DATA_OUT: OUT std_logic_vector(11 downto 0);
+			  
+           adc_out : out  STD_LOGIC);
+end adc;
+
+architecture Behavioral of adc is
+
+ signal DATA_OUT1:  std_logic_vector(11 downto 0);
+ 
+type M_STATE_type is (st1,st2,st3,st4,st5,st6,st7,st8);
+signal M_state : M_STATE_type;
+	COMPONENT P2S
+	PORT(
+		en : IN std_logic;
+		piin : IN std_logic_vector(15 downto 0);
+		ssig : IN std_logic;          
+		serial : OUT std_logic
+		);
+	END COMPONENT;
+	
+		COMPONENT SIPO_code
+	PORT(
+		Din : IN std_logic;
+		clk : IN std_logic;          
+		DATA_OUT : OUT std_logic_vector(11 downto 0)
+		);
+	END COMPONENT;
+
+
+signal cnt:STD_LOGIC_VECTOR(7 DOWNTO 0);
+signal cntr1:STD_LOGIC_VECTOR(15 DOWNTO 0);
+signal en,enb_in,sck1,sck2,clk,LAT :std_logic;
+begin
+	process(CLK)
+	VARIABLE T2:STD_LOGIC_VECTOR(7 DOWNTO 0);
+		begin
+	IF(reset='1' )THEN
+sck1<='0';
+t2:="00000000";
+en<='1';
+cs<='1';
+LAT<='0';
+M_state <= st1;
+
+ELSif CLK'event and CLK = '1' THEN
+	
+			case M_state is		
+			
+			when st1=>
+cs<='0';
+LAT<='0';
+en<='1';
+M_state <= st5;
+when st5=>
+			sck1<='0';
+en<='0';
+			M_state <= st2;
+			
+			when st2=>
+			sck1<='1';
+			M_state <= st3;
+
+			when st3=>
+		if(t2 = "00011000")then
+			t2:="00000000";
+cs<='1';
+en<='0';
+			M_state <= st4;
+		else
+			t2:=t2+1;		
+			M_state <= st5;
+end if;
+
+
+when st4=>
+LAT<='1';
+M_state <= st1;
+							WHEN OTHERS=>	NULL;
+					
+					
+					END CASE ;
+	END IF;
+	cnt<=t2;
+--	END IF;
+END PROCESS;
+
+
+enb_in<= '1' when (cnt > 6) else '0';
+sck<=sck1;
+
+
+
+	Inst_P2S: P2S PORT MAP(
+		en =>en ,
+		serial =>adc_out ,
+		piin =>"0000001111111110" ,
+		ssig =>sck1 
+	);
+
+
+
+
+	Inst_SIPO_code: SIPO_code PORT MAP(
+		Din =>adc_in ,
+		DATA_OUT =>DATA_OUT1 ,
+		clk =>sck2 
+	);
+
+
+sck2<=sck1 when (enb_in='1') else '0';
+
+
+
+	process(clk_12)
+	VARIABLE T2:STD_LOGIC_VECTOR(7 DOWNTO 0);
+		begin
+	IF(reset='1' )THEN
+cntr1<="0000000000000000";
+
+ELSif clk_12'event and clk_12 = '1' THEN
+
+cntr1<=cntr1+1;
+end if;
+end process;
+
+clk <= cntr1(2);
+
+
+
+
+	process(LAT)
+		begin
+	IF(LAT='1' )THEN
+DATA_OUT<=DATA_OUT1;
+end if;
+end process;
+
+
+
+end Behavioral;
+

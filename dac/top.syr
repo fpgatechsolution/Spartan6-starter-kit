@@ -1,0 +1,1373 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-tqg144
+
+---- Source Options
+Top Module Name                    : top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "E:\KITCODE\reinfold\dac test\DAC\P2S.v" into library work
+Parsing module <p_to_s>.
+Analyzing Verilog file "E:\KITCODE\reinfold\dac test\DAC\bintobcd.v" into library work
+Parsing module <binbcd16>.
+Parsing VHDL file "E:\KITCODE\reinfold\dac test\DAC\SEVEN_SIGMENT.vhd" into library work
+Parsing entity <SEVEN_SEGMENT>.
+Parsing architecture <BEHAVE> of entity <seven_segment>.
+Parsing VHDL file "E:\KITCODE\reinfold\dac test\DAC\LCD_CNTROL.vhd" into library work
+Parsing entity <LCD>.
+Parsing architecture <a> of entity <lcd>.
+Parsing VHDL file "E:\KITCODE\reinfold\dac test\DAC\DAC.vhd" into library work
+Parsing entity <DAC>.
+Parsing architecture <BEHAVIORAL> of entity <dac>.
+Parsing VHDL file "E:\KITCODE\reinfold\dac test\DAC\top.vhd" into library work
+Parsing entity <top>.
+Parsing architecture <Behavioral> of entity <top>.
+WARNING:HDLCompiler:946 - "E:\KITCODE\reinfold\dac test\DAC\top.vhd" Line 154: Actual for formal port reset is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "E:\KITCODE\reinfold\dac test\DAC\top.vhd" Line 187: Actual for formal port reset is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "E:\KITCODE\reinfold\dac test\DAC\top.vhd" Line 249: Actual for formal port reset is neither a static name nor a globally static expression
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <top> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <SEVEN_SEGMENT> (architecture <BEHAVE>) from library <work>.
+WARNING:HDLCompiler:92 - "E:\KITCODE\reinfold\dac test\DAC\SEVEN_SIGMENT.vhd" Line 52: reset should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "E:\KITCODE\reinfold\dac test\DAC\SEVEN_SIGMENT.vhd" Line 66: reset should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "E:\KITCODE\reinfold\dac test\DAC\SEVEN_SIGMENT.vhd" Line 80: bcd should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "E:\KITCODE\reinfold\dac test\DAC\SEVEN_SIGMENT.vhd" Line 89: data_disp_1 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "E:\KITCODE\reinfold\dac test\DAC\SEVEN_SIGMENT.vhd" Line 99: data_disp_2 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "E:\KITCODE\reinfold\dac test\DAC\SEVEN_SIGMENT.vhd" Line 109: data_disp_3 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "E:\KITCODE\reinfold\dac test\DAC\SEVEN_SIGMENT.vhd" Line 120: data_disp_4 should be on the sensitivity list of the process
+
+Elaborating entity <LCD> (architecture <a>) from library <work>.
+
+Elaborating entity <DAC> (architecture <BEHAVIORAL>) from library <work>.
+WARNING:HDLCompiler:92 - "E:\KITCODE\reinfold\dac test\DAC\DAC.vhd" Line 47: reset should be on the sensitivity list of the process
+WARNING:HDLCompiler:1127 - "E:\KITCODE\reinfold\dac test\DAC\DAC.vhd" Line 44: Assignment to lat ignored, since the identifier is never used
+Going to verilog side to elaborate module p_to_s
+
+Elaborating module <p_to_s>.
+Back to vhdl to continue elaboration
+WARNING:HDLCompiler:92 - "E:\KITCODE\reinfold\dac test\DAC\DAC.vhd" Line 124: reset should be on the sensitivity list of the process
+Going to verilog side to elaborate module binbcd16
+
+Elaborating module <binbcd16>.
+WARNING:HDLCompiler:413 - "E:\KITCODE\reinfold\dac test\DAC\bintobcd.v" Line 19: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "E:\KITCODE\reinfold\dac test\DAC\bintobcd.v" Line 21: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "E:\KITCODE\reinfold\dac test\DAC\bintobcd.v" Line 23: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "E:\KITCODE\reinfold\dac test\DAC\bintobcd.v" Line 25: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "E:\KITCODE\reinfold\dac test\DAC\bintobcd.v" Line 36: Result of 20-bit expression is truncated to fit in 19-bit target.
+Back to vhdl to continue elaboration
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <top>.
+    Related source file is "E:\KITCODE\reinfold\dac test\DAC\top.vhd".
+WARNING:Xst:647 - Input <dip_led> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "E:\KITCODE\reinfold\dac test\DAC\top.vhd" line 152: Output port <sel_disp5> of the instance <Inst_SEVEN_SEGMENT> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\KITCODE\reinfold\dac test\DAC\top.vhd" line 152: Output port <sel_disp6> of the instance <Inst_SEVEN_SEGMENT> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\KITCODE\reinfold\dac test\DAC\top.vhd" line 186: Output port <LCD_RW> of the instance <Inst_LCD> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <top> synthesized.
+
+Synthesizing Unit <SEVEN_SEGMENT>.
+    Related source file is "E:\KITCODE\reinfold\dac test\DAC\SEVEN_SIGMENT.vhd".
+WARNING:Xst:647 - Input <data_disp_5> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <data_disp_6> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 16-bit register for signal <COUNT>.
+    Found 3-bit register for signal <BCD>.
+    Found 16-bit adder for signal <COUNT[15]_GND_7_o_add_0_OUT> created at line 56.
+    Found 3-bit adder for signal <BCD[2]_GND_7_o_add_3_OUT> created at line 70.
+    Found 16x7-bit Read Only RAM for signal <DISP>
+    Found 8x5-bit Read Only RAM for signal <_n0061>
+    Found 1-bit 4-to-1 multiplexer for signal <BCD[2]_COUNT_BCD[1]_Mux_22_o> created at line 80.
+    Found 1-bit 4-to-1 multiplexer for signal <BCD[2]_COUNT_BCD[3]_Mux_18_o> created at line 80.
+    Found 1-bit 4-to-1 multiplexer for signal <BCD[2]_COUNT_BCD[2]_Mux_20_o> created at line 80.
+    Found 1-bit 4-to-1 multiplexer for signal <BCD[2]_COUNT_BCD[0]_Mux_24_o> created at line 80.
+WARNING:Xst:737 - Found 1-bit latch for signal <sel_disp1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <sel_disp2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <sel_disp3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <sel_disp4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <COUNT_BCD<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <COUNT_BCD<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <COUNT_BCD<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <COUNT_BCD<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   2 RAM(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  19 D-type flip-flop(s).
+	inferred   8 Latch(s).
+	inferred   4 Multiplexer(s).
+Unit <SEVEN_SEGMENT> synthesized.
+
+Synthesizing Unit <LCD>.
+    Related source file is "E:\KITCODE\reinfold\dac test\DAC\LCD_CNTROL.vhd".
+    Found 1-bit register for signal <LCD_E>.
+    Found 8-bit register for signal <DATA_BUS_VALUE>.
+    Found 5-bit register for signal <next_command>.
+    Found 5-bit register for signal <state>.
+    Found 1-bit register for signal <LCD_RS>.
+    Found 1-bit register for signal <LCD_RW>.
+    Found 1-bit register for signal <CLK_400HZ>.
+    Found 1-bit register for signal <LINE>.
+    Found 16-bit register for signal <CLK_COUNT_400HZ>.
+    Found 16-bit adder for signal <CLK_COUNT_400HZ[15]_GND_24_o_add_2_OUT> created at line 50.
+    Found 16-bit comparator greater for signal <CLK_COUNT_400HZ[15]_GND_24_o_LessThan_2_o> created at line 49
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  38 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred  46 Multiplexer(s).
+Unit <LCD> synthesized.
+
+Synthesizing Unit <DAC>.
+    Related source file is "E:\KITCODE\reinfold\dac test\DAC\DAC.vhd".
+WARNING:Xst:647 - Input <MISO> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <CS>.
+    Found 1-bit register for signal <EN>.
+    Found 1-bit register for signal <SCK1>.
+    Found 8-bit register for signal <T2_0002>.
+    Found 4-bit register for signal <M_STATE>.
+    Found 16-bit register for signal <CNTR1>.
+INFO:Xst:1799 - State st5 is never reached in FSM <M_STATE>.
+INFO:Xst:1799 - State st6 is never reached in FSM <M_STATE>.
+INFO:Xst:1799 - State st7 is never reached in FSM <M_STATE>.
+INFO:Xst:1799 - State st8 is never reached in FSM <M_STATE>.
+    Found finite state machine <FSM_0> for signal <M_STATE>.
+    -----------------------------------------------------------------------
+    | States             | 9                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 6                                              |
+    | Clock              | CLK (rising_edge)                              |
+    | Reset              | RESET (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | sten                                           |
+    | Power Up State     | st1                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit adder for signal <T2[7]_GND_184_o_add_1_OUT> created at line 84.
+    Found 16-bit adder for signal <CNTR1[15]_GND_184_o_add_13_OUT> created at line 127.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  27 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <DAC> synthesized.
+
+Synthesizing Unit <p_to_s>.
+    Related source file is "E:\KITCODE\reinfold\dac test\DAC\P2S.v".
+    Found 1-bit register for signal <serial_out>.
+    Found 1-bit register for signal <s_out<15>>.
+    Found 1-bit register for signal <s_out<14>>.
+    Found 1-bit register for signal <s_out<13>>.
+    Found 1-bit register for signal <s_out<12>>.
+    Found 1-bit register for signal <s_out<11>>.
+    Found 1-bit register for signal <s_out<10>>.
+    Found 1-bit register for signal <s_out<9>>.
+    Found 1-bit register for signal <s_out<8>>.
+    Found 1-bit register for signal <s_out<7>>.
+    Found 1-bit register for signal <s_out<6>>.
+    Found 1-bit register for signal <s_out<5>>.
+    Found 1-bit register for signal <s_out<4>>.
+    Found 1-bit register for signal <s_out<3>>.
+    Found 1-bit register for signal <s_out<2>>.
+    Found 1-bit register for signal <s_out<1>>.
+    Found 1-bit register for signal <s_out<0>>.
+    Summary:
+	inferred  17 D-type flip-flop(s).
+Unit <p_to_s> synthesized.
+
+Synthesizing Unit <binbcd16>.
+    Related source file is "E:\KITCODE\reinfold\dac test\DAC\bintobcd.v".
+    Found 4-bit adder for signal <n0316> created at line 19.
+    Found 4-bit adder for signal <B[15]_GND_188_o_add_3_OUT> created at line 19.
+    Found 4-bit adder for signal <B[14]_GND_188_o_add_5_OUT> created at line 19.
+    Found 4-bit adder for signal <B[13]_GND_188_o_add_7_OUT> created at line 19.
+    Found 4-bit adder for signal <n0324> created at line 21.
+    Found 4-bit adder for signal <B[12]_GND_188_o_add_11_OUT> created at line 19.
+    Found 4-bit adder for signal <GND_188_o_GND_188_o_add_13_OUT> created at line 21.
+    Found 4-bit adder for signal <B[11]_GND_188_o_add_15_OUT> created at line 19.
+    Found 4-bit adder for signal <B[15]_GND_188_o_add_17_OUT> created at line 21.
+    Found 4-bit adder for signal <B[10]_GND_188_o_add_19_OUT> created at line 19.
+    Found 4-bit adder for signal <B[14]_GND_188_o_add_21_OUT> created at line 21.
+    Found 4-bit adder for signal <n0338> created at line 23.
+    Found 4-bit adder for signal <B[9]_GND_188_o_add_25_OUT> created at line 19.
+    Found 4-bit adder for signal <B[13]_GND_188_o_add_27_OUT> created at line 21.
+    Found 4-bit adder for signal <GND_188_o_GND_188_o_add_29_OUT> created at line 23.
+    Found 4-bit adder for signal <B[8]_GND_188_o_add_31_OUT> created at line 19.
+    Found 4-bit adder for signal <B[12]_GND_188_o_add_33_OUT> created at line 21.
+    Found 4-bit adder for signal <GND_188_o_GND_188_o_add_35_OUT> created at line 23.
+    Found 4-bit adder for signal <B[7]_GND_188_o_add_37_OUT> created at line 19.
+    Found 4-bit adder for signal <B[11]_GND_188_o_add_39_OUT> created at line 21.
+    Found 4-bit adder for signal <B[15]_GND_188_o_add_41_OUT> created at line 23.
+    Found 4-bit adder for signal <n0358> created at line 25.
+    Found 4-bit adder for signal <B[6]_GND_188_o_add_45_OUT> created at line 19.
+    Found 4-bit adder for signal <B[10]_GND_188_o_add_47_OUT> created at line 21.
+    Found 4-bit adder for signal <B[14]_GND_188_o_add_49_OUT> created at line 23.
+    Found 4-bit adder for signal <GND_188_o_GND_188_o_add_51_OUT> created at line 25.
+    Found 4-bit adder for signal <B[5]_GND_188_o_add_53_OUT> created at line 19.
+    Found 4-bit adder for signal <B[9]_GND_188_o_add_55_OUT> created at line 21.
+    Found 4-bit adder for signal <B[13]_GND_188_o_add_57_OUT> created at line 23.
+    Found 4-bit adder for signal <GND_188_o_GND_188_o_add_59_OUT> created at line 25.
+    Found 4-bit adder for signal <B[4]_GND_188_o_add_61_OUT> created at line 19.
+    Found 4-bit adder for signal <B[8]_GND_188_o_add_63_OUT> created at line 21.
+    Found 4-bit adder for signal <B[12]_GND_188_o_add_65_OUT> created at line 23.
+    Found 4-bit adder for signal <GND_188_o_GND_188_o_add_67_OUT> created at line 25.
+    Found 3-bit adder for signal <n0245> created at line 28.
+    Found 3-bit comparator greater for signal <PWR_90_o_B[15]_LessThan_1_o> created at line 18
+    Found 4-bit comparator greater for signal <GND_188_o_B[15]_LessThan_3_o> created at line 18
+    Found 4-bit comparator greater for signal <GND_188_o_B[14]_LessThan_5_o> created at line 18
+    Found 4-bit comparator greater for signal <GND_188_o_B[13]_LessThan_7_o> created at line 18
+    Found 3-bit comparator greater for signal <PWR_90_o_GND_188_o_LessThan_9_o> created at line 20
+    Found 4-bit comparator greater for signal <GND_188_o_B[12]_LessThan_11_o> created at line 18
+    Found 4-bit comparator greater for signal <GND_188_o_GND_188_o_LessThan_13_o> created at line 20
+    Found 4-bit comparator greater for signal <GND_188_o_B[11]_LessThan_15_o> created at line 18
+    Found 4-bit comparator greater for signal <GND_188_o_B[15]_LessThan_17_o> created at line 20
+    Found 4-bit comparator greater for signal <GND_188_o_B[10]_LessThan_19_o> created at line 18
+    Found 4-bit comparator greater for signal <GND_188_o_B[14]_LessThan_21_o> created at line 20
+    Found 3-bit comparator greater for signal <PWR_90_o_GND_188_o_LessThan_23_o> created at line 22
+    Found 4-bit comparator greater for signal <GND_188_o_B[9]_LessThan_25_o> created at line 18
+    Found 4-bit comparator greater for signal <GND_188_o_B[13]_LessThan_27_o> created at line 20
+    Found 4-bit comparator greater for signal <GND_188_o_GND_188_o_LessThan_29_o> created at line 22
+    Found 4-bit comparator greater for signal <GND_188_o_B[8]_LessThan_31_o> created at line 18
+    Found 4-bit comparator greater for signal <GND_188_o_B[12]_LessThan_33_o> created at line 20
+    Found 4-bit comparator greater for signal <GND_188_o_GND_188_o_LessThan_35_o> created at line 22
+    Found 4-bit comparator greater for signal <GND_188_o_B[7]_LessThan_37_o> created at line 18
+    Found 4-bit comparator greater for signal <GND_188_o_B[11]_LessThan_39_o> created at line 20
+    Found 4-bit comparator greater for signal <GND_188_o_B[15]_LessThan_41_o> created at line 22
+    Found 3-bit comparator greater for signal <PWR_90_o_GND_188_o_LessThan_43_o> created at line 24
+    Found 4-bit comparator greater for signal <GND_188_o_B[6]_LessThan_45_o> created at line 18
+    Found 4-bit comparator greater for signal <GND_188_o_B[10]_LessThan_47_o> created at line 20
+    Found 4-bit comparator greater for signal <GND_188_o_B[14]_LessThan_49_o> created at line 22
+    Found 4-bit comparator greater for signal <GND_188_o_GND_188_o_LessThan_51_o> created at line 24
+    Found 4-bit comparator greater for signal <GND_188_o_B[5]_LessThan_53_o> created at line 18
+    Found 4-bit comparator greater for signal <GND_188_o_B[9]_LessThan_55_o> created at line 20
+    Found 4-bit comparator greater for signal <GND_188_o_B[13]_LessThan_57_o> created at line 22
+    Found 4-bit comparator greater for signal <GND_188_o_GND_188_o_LessThan_59_o> created at line 24
+    Found 4-bit comparator greater for signal <GND_188_o_B[4]_LessThan_61_o> created at line 18
+    Found 4-bit comparator greater for signal <GND_188_o_B[8]_LessThan_63_o> created at line 20
+    Found 4-bit comparator greater for signal <GND_188_o_B[12]_LessThan_65_o> created at line 22
+    Found 4-bit comparator greater for signal <GND_188_o_GND_188_o_LessThan_67_o> created at line 24
+    Found 3-bit comparator greater for signal <PWR_90_o_GND_188_o_LessThan_69_o> created at line 27
+    Summary:
+	inferred  35 Adder/Subtractor(s).
+	inferred  35 Comparator(s).
+	inferred 138 Multiplexer(s).
+Unit <binbcd16> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x7-bit single-port Read Only RAM                    : 1
+ 8x5-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 40
+ 16-bit adder                                          : 3
+ 3-bit adder                                           : 2
+ 4-bit adder                                           : 34
+ 8-bit adder                                           : 1
+# Registers                                            : 32
+ 1-bit register                                        : 24
+ 16-bit register                                       : 3
+ 3-bit register                                        : 1
+ 5-bit register                                        : 2
+ 8-bit register                                        : 2
+# Latches                                              : 8
+ 1-bit latch                                           : 8
+# Comparators                                          : 36
+ 16-bit comparator greater                             : 1
+ 3-bit comparator greater                              : 5
+ 4-bit comparator greater                              : 30
+# Multiplexers                                         : 189
+ 1-bit 2-to-1 multiplexer                              : 146
+ 1-bit 4-to-1 multiplexer                              : 4
+ 16-bit 2-to-1 multiplexer                             : 1
+ 5-bit 2-to-1 multiplexer                              : 14
+ 8-bit 2-to-1 multiplexer                              : 24
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch <s_out_15> (without init value) has a constant value of 0 in block <inst_p_to_s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s_out_14> (without init value) has a constant value of 0 in block <inst_p_to_s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s_out_13> (without init value) has a constant value of 0 in block <inst_p_to_s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s_out_12> (without init value) has a constant value of 0 in block <inst_p_to_s>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <DAC>.
+The following registers are absorbed into counter <CNTR1>: 1 register on signal <CNTR1>.
+The following registers are absorbed into counter <T2>: 1 register on signal <T2>.
+Unit <DAC> synthesized (advanced).
+
+Synthesizing (advanced) Unit <LCD>.
+The following registers are absorbed into counter <CLK_COUNT_400HZ>: 1 register on signal <CLK_COUNT_400HZ>.
+Unit <LCD> synthesized (advanced).
+
+Synthesizing (advanced) Unit <SEVEN_SEGMENT>.
+The following registers are absorbed into counter <COUNT>: 1 register on signal <COUNT>.
+The following registers are absorbed into counter <BCD>: 1 register on signal <BCD>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0061> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 5-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <BCD>           |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_DISP> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 7-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <COUNT_BCD>     |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <DISP>          |          |
+    -----------------------------------------------------------------------
+Unit <SEVEN_SEGMENT> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x7-bit single-port distributed Read Only RAM        : 1
+ 8x5-bit single-port distributed Read Only RAM         : 1
+# Adders/Subtractors                                   : 35
+ 2-bit adder                                           : 1
+ 4-bit adder                                           : 34
+# Counters                                             : 5
+ 16-bit up counter                                     : 3
+ 3-bit up counter                                      : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 42
+ Flip-Flops                                            : 42
+# Comparators                                          : 36
+ 16-bit comparator greater                             : 1
+ 3-bit comparator greater                              : 5
+ 4-bit comparator greater                              : 30
+# Multiplexers                                         : 187
+ 1-bit 2-to-1 multiplexer                              : 146
+ 1-bit 4-to-1 multiplexer                              : 4
+ 5-bit 2-to-1 multiplexer                              : 14
+ 8-bit 2-to-1 multiplexer                              : 23
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <s_out_15> (without init value) has a constant value of 0 in block <p_to_s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s_out_14> (without init value) has a constant value of 0 in block <p_to_s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s_out_13> (without init value) has a constant value of 0 in block <p_to_s>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s_out_12> (without init value) has a constant value of 0 in block <p_to_s>. This FF/Latch will be trimmed during the optimization process.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <Inst_adc/FSM_0> on signal <M_STATE[1:4]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ st1   | 0000
+ st2   | 0001
+ st3   | 0010
+ st4   | 0011
+ st5   | unreached
+ st6   | unreached
+ st7   | unreached
+ st8   | unreached
+ sten  | 1000
+-------------------
+WARNING:Xst:2677 - Node <CNTR1_3> of sequential type is unconnected in block <DAC>.
+WARNING:Xst:2677 - Node <CNTR1_4> of sequential type is unconnected in block <DAC>.
+WARNING:Xst:2677 - Node <CNTR1_5> of sequential type is unconnected in block <DAC>.
+WARNING:Xst:2677 - Node <CNTR1_6> of sequential type is unconnected in block <DAC>.
+WARNING:Xst:2677 - Node <CNTR1_7> of sequential type is unconnected in block <DAC>.
+WARNING:Xst:2677 - Node <CNTR1_8> of sequential type is unconnected in block <DAC>.
+WARNING:Xst:2677 - Node <CNTR1_9> of sequential type is unconnected in block <DAC>.
+WARNING:Xst:2677 - Node <CNTR1_10> of sequential type is unconnected in block <DAC>.
+WARNING:Xst:2677 - Node <CNTR1_11> of sequential type is unconnected in block <DAC>.
+WARNING:Xst:2677 - Node <CNTR1_12> of sequential type is unconnected in block <DAC>.
+WARNING:Xst:2677 - Node <CNTR1_13> of sequential type is unconnected in block <DAC>.
+WARNING:Xst:2677 - Node <CNTR1_14> of sequential type is unconnected in block <DAC>.
+WARNING:Xst:2677 - Node <CNTR1_15> of sequential type is unconnected in block <DAC>.
+WARNING:Xst:2677 - Node <COUNT_15> of sequential type is unconnected in block <SEVEN_SEGMENT>.
+WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
+   incompatible with the Spartan6 architecture. The two primary causes of this is
+   either a register or latch described with both an asynchronous set and
+   asynchronous reset, or a register or latch described with an asynchronous
+   set or reset which however has an initialization value of the opposite 
+   polarity (i.e. asynchronous reset with an initialization value of 1).
+    While this circuit can be built, it creates a sub-optimal implementation
+   in terms of area, power and performance. For a more optimal implementation
+   Xilinx highly recommends one of the following:
+
+          1) Remove either the set or reset from all registers and latches
+             if not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Ensure all registers have the same initialization value as the
+             described asynchronous set or reset polarity
+          4) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Spartan6 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    s_out_4 in unit <p_to_s>
+    s_out_5 in unit <p_to_s>
+    s_out_6 in unit <p_to_s>
+    s_out_7 in unit <p_to_s>
+    s_out_8 in unit <p_to_s>
+    s_out_9 in unit <p_to_s>
+    s_out_10 in unit <p_to_s>
+    s_out_11 in unit <p_to_s>
+
+
+  List of register instances with asynchronous set or reset and opposite initialization value:
+    state_4 in unit <LCD>
+    state_2 in unit <LCD>
+    state_1 in unit <LCD>
+    M_STATE_FSM_FFd1 in unit <DAC>
+
+
+Optimizing unit <top> ...
+
+Optimizing unit <DAC> ...
+
+Optimizing unit <p_to_s> ...
+
+Optimizing unit <SEVEN_SEGMENT> ...
+
+Optimizing unit <LCD> ...
+
+Optimizing unit <binbcd16> ...
+WARNING:Xst:1710 - FF/Latch <Inst_adc/T2_7> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Inst_adc/T2_6> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Inst_adc/T2_5> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_LCD/CLK_COUNT_400HZ_15> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_LCD/CLK_COUNT_400HZ_14> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <Inst_adc/CNTR1_0> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <Inst_SEVEN_SEGMENT/COUNT_0> 
+INFO:Xst:2261 - The FF/Latch <Inst_adc/CNTR1_1> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <Inst_SEVEN_SEGMENT/COUNT_1> 
+INFO:Xst:2261 - The FF/Latch <Inst_adc/CNTR1_2> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <Inst_SEVEN_SEGMENT/COUNT_2> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 3.
+WARNING:Xst:1426 - The value init of the FF/Latch Inst_adc/M_STATE_FSM_FFd1_LD hinder the constant cleaning in the block top.
+   You should achieve better results by setting this init to 1.
+FlipFlop Inst_LCD/state_0 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 90
+ Flip-Flops                                            : 90
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 229
+#      GND                         : 1
+#      INV                         : 6
+#      LUT1                        : 20
+#      LUT2                        : 21
+#      LUT3                        : 23
+#      LUT4                        : 15
+#      LUT5                        : 24
+#      LUT6                        : 49
+#      MUXCY                       : 33
+#      MUXF7                       : 2
+#      VCC                         : 1
+#      XORCY                       : 34
+# FlipFlops/Latches                : 107
+#      FD                          : 5
+#      FDC                         : 24
+#      FDC_1                       : 9
+#      FDCE                        : 12
+#      FDP                         : 7
+#      FDP_1                       : 11
+#      FDPE                        : 7
+#      FDR                         : 15
+#      LD                          : 9
+#      LDC                         : 8
+# Clock Buffers                    : 4
+#      BUFG                        : 3
+#      BUFGP                       : 1
+# IO Buffers                       : 42
+#      IBUF                        : 9
+#      OBUF                        : 33
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             103  out of  11440     0%  
+ Number of Slice LUTs:                  158  out of   5720     2%  
+    Number used as Logic:               158  out of   5720     2%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    178
+   Number with an unused Flip Flop:      75  out of    178    42%  
+   Number with an unused LUT:            20  out of    178    11%  
+   Number of fully used LUT-FF pairs:    83  out of    178    46%  
+   Number of unique control sets:        35
+
+IO Utilization: 
+ Number of IOs:                          52
+ Number of bonded IOBs:                  43  out of    102    42%  
+    IOB Flip Flops/Latches:               4
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                4  out of     16    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------------------------------------------------------------------------+-------------------------------------------+-------+
+Clock Signal                                                                                         | Clock buffer(FF name)                     | Load  |
+-----------------------------------------------------------------------------------------------------+-------------------------------------------+-------+
+Inst_adc/CNTR1_2                                                                                     | NONE(Inst_adc/M_STATE_FSM_FFd3)           | 12    |
+clk_12mhz                                                                                            | BUFGP                                     | 30    |
+Inst_SEVEN_SEGMENT/COUNT_14                                                                          | NONE(Inst_SEVEN_SEGMENT/BCD_2)            | 3     |
+Inst_SEVEN_SEGMENT/BCD_2                                                                             | NONE(Inst_SEVEN_SEGMENT/sel_disp4)        | 8     |
+Inst_LCD/CLK_400HZ                                                                                   | BUFG                                      | 25    |
+reset                                                                                                | IBUF+BUFG                                 | 1     |
+Inst_adc/SCK1                                                                                        | BUFG                                      | 20    |
+Inst_adc/inst_p_to_s/GND_186_o_p_in[4]_AND_23_o(Inst_adc/inst_p_to_s/GND_186_o_p_in[4]_AND_23_o1:O)  | NONE(*)(Inst_adc/inst_p_to_s/s_out_4_LDC) | 1     |
+Inst_adc/inst_p_to_s/GND_186_o_p_in[5]_AND_21_o(Inst_adc/inst_p_to_s/GND_186_o_p_in[5]_AND_21_o1:O)  | NONE(*)(Inst_adc/inst_p_to_s/s_out_5_LDC) | 1     |
+Inst_adc/inst_p_to_s/GND_186_o_p_in[6]_AND_19_o(Inst_adc/inst_p_to_s/GND_186_o_p_in[6]_AND_19_o1:O)  | NONE(*)(Inst_adc/inst_p_to_s/s_out_6_LDC) | 1     |
+Inst_adc/inst_p_to_s/GND_186_o_p_in[7]_AND_17_o(Inst_adc/inst_p_to_s/GND_186_o_p_in[7]_AND_17_o1:O)  | NONE(*)(Inst_adc/inst_p_to_s/s_out_7_LDC) | 1     |
+Inst_adc/inst_p_to_s/GND_186_o_p_in[8]_AND_15_o(Inst_adc/inst_p_to_s/GND_186_o_p_in[8]_AND_15_o1:O)  | NONE(*)(Inst_adc/inst_p_to_s/s_out_8_LDC) | 1     |
+Inst_adc/inst_p_to_s/GND_186_o_p_in[9]_AND_13_o(Inst_adc/inst_p_to_s/GND_186_o_p_in[9]_AND_13_o1:O)  | NONE(*)(Inst_adc/inst_p_to_s/s_out_9_LDC) | 1     |
+Inst_adc/inst_p_to_s/GND_186_o_p_in[10]_AND_11_o(Inst_adc/inst_p_to_s/GND_186_o_p_in[10]_AND_11_o1:O)| NONE(*)(Inst_adc/inst_p_to_s/s_out_10_LDC)| 1     |
+Inst_adc/inst_p_to_s/GND_186_o_p_in[11]_AND_9_o(Inst_adc/inst_p_to_s/GND_186_o_p_in[11]_AND_9_o1:O)  | NONE(*)(Inst_adc/inst_p_to_s/s_out_11_LDC)| 1     |
+-----------------------------------------------------------------------------------------------------+-------------------------------------------+-------+
+(*) These 8 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.926ns (Maximum Frequency: 254.712MHz)
+   Minimum input arrival time before clock: 8.119ns
+   Maximum output required time after clock: 4.872ns
+   Maximum combinational path delay: 4.701ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Inst_adc/CNTR1_2'
+  Clock period: 2.864ns (frequency: 349.186MHz)
+  Total number of paths / destination ports: 109 / 17
+-------------------------------------------------------------------------
+Delay:               2.864ns (Levels of Logic = 2)
+  Source:            Inst_adc/T2_4 (FF)
+  Destination:       Inst_adc/EN (FF)
+  Source Clock:      Inst_adc/CNTR1_2 rising
+  Destination Clock: Inst_adc/CNTR1_2 rising
+
+  Data Path: Inst_adc/T2_4 to Inst_adc/EN
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.447   0.995  Inst_adc/T2_4 (Inst_adc/T2_4)
+     LUT5:I0->O            4   0.203   0.912  Inst_adc/T2[7]_GND_184_o_equal_1_o<7>1 (Inst_adc/T2[7]_GND_184_o_equal_1_o)
+     LUT5:I2->O            1   0.205   0.000  Inst_adc/EN_rstpot (Inst_adc/EN_rstpot)
+     FDP:D                     0.102          Inst_adc/EN
+    ----------------------------------------
+    Total                      2.864ns (0.957ns logic, 1.907ns route)
+                                       (33.4% logic, 66.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_12mhz'
+  Clock period: 3.926ns (frequency: 254.712MHz)
+  Total number of paths / destination ports: 1503 / 30
+-------------------------------------------------------------------------
+Delay:               3.926ns (Levels of Logic = 16)
+  Source:            Inst_LCD/CLK_COUNT_400HZ_8 (FF)
+  Destination:       Inst_LCD/CLK_COUNT_400HZ_13 (FF)
+  Source Clock:      clk_12mhz rising
+  Destination Clock: clk_12mhz rising
+
+  Data Path: Inst_LCD/CLK_COUNT_400HZ_8 to Inst_LCD/CLK_COUNT_400HZ_13
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.447   0.981  Inst_LCD/CLK_COUNT_400HZ_8 (Inst_LCD/CLK_COUNT_400HZ_8)
+     LUT6:I0->O           15   0.203   0.982  Inst_LCD/CLK_COUNT_400HZ[15]_GND_24_o_LessThan_2_o_inv1_inv21 (Inst_LCD/CLK_COUNT_400HZ[15]_GND_24_o_LessThan_2_o_inv1_inv2)
+     LUT6:I5->O            1   0.205   0.579  Inst_LCD/CLK_COUNT_400HZ[15]_GND_24_o_LessThan_2_o_inv1_inv22 (Inst_LCD/CLK_COUNT_400HZ[15]_GND_24_o_LessThan_2_o_inv1_inv)
+     MUXCY:CI->O           1   0.019   0.000  Inst_LCD/Mcount_CLK_COUNT_400HZ_cy<0> (Inst_LCD/Mcount_CLK_COUNT_400HZ_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Inst_LCD/Mcount_CLK_COUNT_400HZ_cy<1> (Inst_LCD/Mcount_CLK_COUNT_400HZ_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Inst_LCD/Mcount_CLK_COUNT_400HZ_cy<2> (Inst_LCD/Mcount_CLK_COUNT_400HZ_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Inst_LCD/Mcount_CLK_COUNT_400HZ_cy<3> (Inst_LCD/Mcount_CLK_COUNT_400HZ_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Inst_LCD/Mcount_CLK_COUNT_400HZ_cy<4> (Inst_LCD/Mcount_CLK_COUNT_400HZ_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Inst_LCD/Mcount_CLK_COUNT_400HZ_cy<5> (Inst_LCD/Mcount_CLK_COUNT_400HZ_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Inst_LCD/Mcount_CLK_COUNT_400HZ_cy<6> (Inst_LCD/Mcount_CLK_COUNT_400HZ_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Inst_LCD/Mcount_CLK_COUNT_400HZ_cy<7> (Inst_LCD/Mcount_CLK_COUNT_400HZ_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Inst_LCD/Mcount_CLK_COUNT_400HZ_cy<8> (Inst_LCD/Mcount_CLK_COUNT_400HZ_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Inst_LCD/Mcount_CLK_COUNT_400HZ_cy<9> (Inst_LCD/Mcount_CLK_COUNT_400HZ_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Inst_LCD/Mcount_CLK_COUNT_400HZ_cy<10> (Inst_LCD/Mcount_CLK_COUNT_400HZ_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Inst_LCD/Mcount_CLK_COUNT_400HZ_cy<11> (Inst_LCD/Mcount_CLK_COUNT_400HZ_cy<11>)
+     MUXCY:CI->O           0   0.019   0.000  Inst_LCD/Mcount_CLK_COUNT_400HZ_cy<12> (Inst_LCD/Mcount_CLK_COUNT_400HZ_cy<12>)
+     XORCY:CI->O           1   0.180   0.000  Inst_LCD/Mcount_CLK_COUNT_400HZ_xor<13> (Inst_LCD/Mcount_CLK_COUNT_400HZ13)
+     FDR:D                     0.102          Inst_LCD/CLK_COUNT_400HZ_13
+    ----------------------------------------
+    Total                      3.926ns (1.384ns logic, 2.542ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Inst_SEVEN_SEGMENT/COUNT_14'
+  Clock period: 2.869ns (frequency: 348.547MHz)
+  Total number of paths / destination ports: 15 / 6
+-------------------------------------------------------------------------
+Delay:               2.869ns (Levels of Logic = 1)
+  Source:            Inst_SEVEN_SEGMENT/BCD_0 (FF)
+  Destination:       Inst_SEVEN_SEGMENT/BCD_2 (FF)
+  Source Clock:      Inst_SEVEN_SEGMENT/COUNT_14 rising
+  Destination Clock: Inst_SEVEN_SEGMENT/COUNT_14 rising
+
+  Data Path: Inst_SEVEN_SEGMENT/BCD_0 to Inst_SEVEN_SEGMENT/BCD_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             12   0.447   1.137  Inst_SEVEN_SEGMENT/BCD_0 (Inst_SEVEN_SEGMENT/BCD_0)
+     LUT4:I1->O            3   0.205   0.650  Inst_SEVEN_SEGMENT/RESET_BCD[2]_OR_3_o1 (Inst_SEVEN_SEGMENT/RESET_BCD[2]_OR_3_o)
+     FDC:CLR                   0.430          Inst_SEVEN_SEGMENT/BCD_0
+    ----------------------------------------
+    Total                      2.869ns (1.082ns logic, 1.787ns route)
+                                       (37.7% logic, 62.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Inst_LCD/CLK_400HZ'
+  Clock period: 3.891ns (frequency: 257.030MHz)
+  Total number of paths / destination ports: 390 / 39
+-------------------------------------------------------------------------
+Delay:               3.891ns (Levels of Logic = 3)
+  Source:            Inst_LCD/state_4_C_4 (FF)
+  Destination:       Inst_LCD/DATA_BUS_VALUE_2 (FF)
+  Source Clock:      Inst_LCD/CLK_400HZ rising
+  Destination Clock: Inst_LCD/CLK_400HZ rising
+
+  Data Path: Inst_LCD/state_4_C_4 to Inst_LCD/DATA_BUS_VALUE_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               6   0.447   0.849  Inst_LCD/state_4_C_4 (Inst_LCD/state_4_C_4)
+     LUT3:I1->O           19   0.203   1.300  Inst_LCD/state_41 (Inst_LCD/state_4)
+     LUT6:I3->O            1   0.205   0.580  Inst_LCD/Mmux_state[4]_X_18_o_wide_mux_30_OUT71 (Inst_LCD/Mmux_state[4]_X_18_o_wide_mux_30_OUT7)
+     LUT6:I5->O            1   0.205   0.000  Inst_LCD/Mmux_state[4]_X_18_o_wide_mux_30_OUT73 (Inst_LCD/state[4]_X_18_o_wide_mux_30_OUT<2>)
+     FDCE:D                    0.102          Inst_LCD/DATA_BUS_VALUE_2
+    ----------------------------------------
+    Total                      3.891ns (1.162ns logic, 2.729ns route)
+                                       (29.9% logic, 70.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Inst_adc/SCK1'
+  Clock period: 1.436ns (frequency: 696.452MHz)
+  Total number of paths / destination ports: 32 / 19
+-------------------------------------------------------------------------
+Delay:               1.436ns (Levels of Logic = 1)
+  Source:            Inst_adc/inst_p_to_s/s_out_4_C_4 (FF)
+  Destination:       Inst_adc/inst_p_to_s/s_out_3 (FF)
+  Source Clock:      Inst_adc/SCK1 falling
+  Destination Clock: Inst_adc/SCK1 falling
+
+  Data Path: Inst_adc/inst_p_to_s/s_out_4_C_4 to Inst_adc/inst_p_to_s/s_out_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC_1:C->Q            1   0.447   0.684  Inst_adc/inst_p_to_s/s_out_4_C_4 (Inst_adc/inst_p_to_s/s_out_4_C_4)
+     LUT3:I1->O            1   0.203   0.000  Inst_adc/inst_p_to_s/s_out_41 (Inst_adc/inst_p_to_s/s_out_4)
+     FDC_1:D                   0.102          Inst_adc/inst_p_to_s/s_out_3
+    ----------------------------------------
+    Total                      1.436ns (0.752ns logic, 0.684ns route)
+                                       (52.4% logic, 47.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Inst_adc/CNTR1_2'
+  Total number of paths / destination ports: 11 / 11
+-------------------------------------------------------------------------
+Offset:              4.134ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Inst_adc/M_STATE_FSM_FFd3 (FF)
+  Destination Clock: Inst_adc/CNTR1_2 rising
+
+  Data Path: reset to Inst_adc/M_STATE_FSM_FFd3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.222   0.650  reset_IBUF (reset_IBUF)
+     INV:I->O             62   0.206   1.626  reset_IBUF_BUFG_LUT1_INV_0 (reset_IBUF_BUFG_LUT1)
+     FDC:CLR                   0.430          Inst_adc/M_STATE_FSM_FFd4
+    ----------------------------------------
+    Total                      4.134ns (1.858ns logic, 2.276ns route)
+                                       (44.9% logic, 55.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_12mhz'
+  Total number of paths / destination ports: 30 / 30
+-------------------------------------------------------------------------
+Offset:              4.134ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Inst_adc/CNTR1_2 (FF)
+  Destination Clock: clk_12mhz rising
+
+  Data Path: reset to Inst_adc/CNTR1_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.222   0.650  reset_IBUF (reset_IBUF)
+     INV:I->O             62   0.206   1.626  reset_IBUF_BUFG_LUT1_INV_0 (reset_IBUF_BUFG_LUT1)
+     FDC:CLR                   0.430          Inst_adc/CNTR1_0
+    ----------------------------------------
+    Total                      4.134ns (1.858ns logic, 2.276ns route)
+                                       (44.9% logic, 55.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Inst_SEVEN_SEGMENT/COUNT_14'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              3.158ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Inst_SEVEN_SEGMENT/BCD_2 (FF)
+  Destination Clock: Inst_SEVEN_SEGMENT/COUNT_14 rising
+
+  Data Path: reset to Inst_SEVEN_SEGMENT/BCD_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.222   0.651  reset_IBUF (reset_IBUF)
+     LUT4:I3->O            3   0.205   0.650  Inst_SEVEN_SEGMENT/RESET_BCD[2]_OR_3_o1 (Inst_SEVEN_SEGMENT/RESET_BCD[2]_OR_3_o)
+     FDC:CLR                   0.430          Inst_SEVEN_SEGMENT/BCD_0
+    ----------------------------------------
+    Total                      3.158ns (1.857ns logic, 1.302ns route)
+                                       (58.8% logic, 41.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Inst_SEVEN_SEGMENT/BCD_2'
+  Total number of paths / destination ports: 303 / 4
+-------------------------------------------------------------------------
+Offset:              6.137ns (Levels of Logic = 5)
+  Source:            SLIDE_SW<3> (PAD)
+  Destination:       Inst_SEVEN_SEGMENT/COUNT_BCD_1 (LATCH)
+  Destination Clock: Inst_SEVEN_SEGMENT/BCD_2 rising
+
+  Data Path: SLIDE_SW<3> to Inst_SEVEN_SEGMENT/COUNT_BCD_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            12   1.222   1.253  SLIDE_SW_3_IBUF (LED_3_OBUF)
+     LUT5:I0->O            8   0.203   1.147  Inst_binbcd16/Mmux_B[5]_B[6]_MUX_211_o11 (Inst_binbcd16/Madd_B[5]_GND_188_o_add_53_OUT_lut<3>)
+     LUT5:I0->O            4   0.203   1.048  Inst_binbcd16/Mmux_B[5]_B[5]_MUX_226_o11 (Inst_binbcd16/Madd_B[8]_GND_188_o_add_63_OUT_cy<0>)
+     LUT6:I0->O            2   0.203   0.617  Inst_binbcd16/Mmux_z<21>11 (bcd<5>)
+     LUT6:I5->O            1   0.205   0.000  Inst_SEVEN_SEGMENT/Mmux_BCD[2]_COUNT_BCD[1]_Mux_22_o11 (Inst_SEVEN_SEGMENT/BCD[2]_COUNT_BCD[1]_Mux_22_o)
+     LD:D                      0.037          Inst_SEVEN_SEGMENT/COUNT_BCD_1
+    ----------------------------------------
+    Total                      6.137ns (2.073ns logic, 4.064ns route)
+                                       (33.8% logic, 66.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Inst_LCD/CLK_400HZ'
+  Total number of paths / destination ports: 325 / 26
+-------------------------------------------------------------------------
+Offset:              8.119ns (Levels of Logic = 7)
+  Source:            SLIDE_SW<3> (PAD)
+  Destination:       Inst_LCD/DATA_BUS_VALUE_1 (FF)
+  Destination Clock: Inst_LCD/CLK_400HZ rising
+
+  Data Path: SLIDE_SW<3> to Inst_LCD/DATA_BUS_VALUE_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            12   1.222   1.253  SLIDE_SW_3_IBUF (LED_3_OBUF)
+     LUT5:I0->O            8   0.203   1.147  Inst_binbcd16/Mmux_B[5]_B[6]_MUX_211_o11 (Inst_binbcd16/Madd_B[5]_GND_188_o_add_53_OUT_lut<3>)
+     LUT5:I0->O            4   0.203   1.048  Inst_binbcd16/Mmux_B[5]_B[5]_MUX_226_o11 (Inst_binbcd16/Madd_B[8]_GND_188_o_add_63_OUT_cy<0>)
+     LUT6:I0->O            2   0.203   0.864  Inst_binbcd16/Mmux_z<21>11 (bcd<5>)
+     LUT4:I0->O            1   0.203   0.684  Inst_LCD/Mmux_state[4]_X_18_o_wide_mux_30_OUT55_SW0 (N22)
+     LUT6:I4->O            1   0.203   0.580  Inst_LCD/Mmux_state[4]_X_18_o_wide_mux_30_OUT55 (Inst_LCD/Mmux_state[4]_X_18_o_wide_mux_30_OUT54)
+     LUT5:I4->O            1   0.205   0.000  Inst_LCD/Mmux_state[4]_X_18_o_wide_mux_30_OUT56 (Inst_LCD/state[4]_X_18_o_wide_mux_30_OUT<1>)
+     FDCE:D                    0.102          Inst_LCD/DATA_BUS_VALUE_1
+    ----------------------------------------
+    Total                      8.119ns (2.544ns logic, 5.575ns route)
+                                       (31.3% logic, 68.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Inst_adc/inst_p_to_s/GND_186_o_p_in[4]_AND_23_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.382ns (Levels of Logic = 2)
+  Source:            SLIDE_SW<0> (PAD)
+  Destination:       Inst_adc/inst_p_to_s/s_out_4_LDC (LATCH)
+  Destination Clock: Inst_adc/inst_p_to_s/GND_186_o_p_in[4]_AND_23_o falling
+
+  Data Path: SLIDE_SW<0> to Inst_adc/inst_p_to_s/s_out_4_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            12   1.222   0.909  SLIDE_SW_0_IBUF (LED_0_OBUF)
+     LUT2:I1->O            2   0.205   0.616  Inst_adc/inst_p_to_s/GND_186_o_p_in[4]_AND_24_o1 (Inst_adc/inst_p_to_s/GND_186_o_p_in[4]_AND_24_o)
+     LDC:CLR                   0.430          Inst_adc/inst_p_to_s/s_out_4_LDC
+    ----------------------------------------
+    Total                      3.382ns (1.857ns logic, 1.525ns route)
+                                       (54.9% logic, 45.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Inst_adc/SCK1'
+  Total number of paths / destination ports: 15 / 15
+-------------------------------------------------------------------------
+Offset:              3.382ns (Levels of Logic = 2)
+  Source:            SLIDE_SW<0> (PAD)
+  Destination:       Inst_adc/inst_p_to_s/s_out_4_C_4 (FF)
+  Destination Clock: Inst_adc/SCK1 falling
+
+  Data Path: SLIDE_SW<0> to Inst_adc/inst_p_to_s/s_out_4_C_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            12   1.222   0.909  SLIDE_SW_0_IBUF (LED_0_OBUF)
+     LUT2:I1->O            2   0.205   0.616  Inst_adc/inst_p_to_s/GND_186_o_p_in[4]_AND_24_o1 (Inst_adc/inst_p_to_s/GND_186_o_p_in[4]_AND_24_o)
+     FDC_1:CLR                 0.430          Inst_adc/inst_p_to_s/s_out_4_C_4
+    ----------------------------------------
+    Total                      3.382ns (1.857ns logic, 1.525ns route)
+                                       (54.9% logic, 45.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Inst_adc/inst_p_to_s/GND_186_o_p_in[5]_AND_21_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.382ns (Levels of Logic = 2)
+  Source:            SLIDE_SW<1> (PAD)
+  Destination:       Inst_adc/inst_p_to_s/s_out_5_LDC (LATCH)
+  Destination Clock: Inst_adc/inst_p_to_s/GND_186_o_p_in[5]_AND_21_o falling
+
+  Data Path: SLIDE_SW<1> to Inst_adc/inst_p_to_s/s_out_5_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            12   1.222   0.909  SLIDE_SW_1_IBUF (LED_1_OBUF)
+     LUT2:I1->O            2   0.205   0.616  Inst_adc/inst_p_to_s/GND_186_o_p_in[5]_AND_22_o1 (Inst_adc/inst_p_to_s/GND_186_o_p_in[5]_AND_22_o)
+     LDC:CLR                   0.430          Inst_adc/inst_p_to_s/s_out_5_LDC
+    ----------------------------------------
+    Total                      3.382ns (1.857ns logic, 1.525ns route)
+                                       (54.9% logic, 45.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Inst_adc/inst_p_to_s/GND_186_o_p_in[6]_AND_19_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.382ns (Levels of Logic = 2)
+  Source:            SLIDE_SW<2> (PAD)
+  Destination:       Inst_adc/inst_p_to_s/s_out_6_LDC (LATCH)
+  Destination Clock: Inst_adc/inst_p_to_s/GND_186_o_p_in[6]_AND_19_o falling
+
+  Data Path: SLIDE_SW<2> to Inst_adc/inst_p_to_s/s_out_6_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            12   1.222   0.909  SLIDE_SW_2_IBUF (LED_2_OBUF)
+     LUT2:I1->O            2   0.205   0.616  Inst_adc/inst_p_to_s/GND_186_o_p_in[6]_AND_20_o1 (Inst_adc/inst_p_to_s/GND_186_o_p_in[6]_AND_20_o)
+     LDC:CLR                   0.430          Inst_adc/inst_p_to_s/s_out_6_LDC
+    ----------------------------------------
+    Total                      3.382ns (1.857ns logic, 1.525ns route)
+                                       (54.9% logic, 45.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Inst_adc/inst_p_to_s/GND_186_o_p_in[7]_AND_17_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.382ns (Levels of Logic = 2)
+  Source:            SLIDE_SW<3> (PAD)
+  Destination:       Inst_adc/inst_p_to_s/s_out_7_LDC (LATCH)
+  Destination Clock: Inst_adc/inst_p_to_s/GND_186_o_p_in[7]_AND_17_o falling
+
+  Data Path: SLIDE_SW<3> to Inst_adc/inst_p_to_s/s_out_7_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            12   1.222   0.909  SLIDE_SW_3_IBUF (LED_3_OBUF)
+     LUT2:I1->O            2   0.205   0.616  Inst_adc/inst_p_to_s/GND_186_o_p_in[7]_AND_18_o1 (Inst_adc/inst_p_to_s/GND_186_o_p_in[7]_AND_18_o)
+     LDC:CLR                   0.430          Inst_adc/inst_p_to_s/s_out_7_LDC
+    ----------------------------------------
+    Total                      3.382ns (1.857ns logic, 1.525ns route)
+                                       (54.9% logic, 45.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Inst_adc/inst_p_to_s/GND_186_o_p_in[8]_AND_15_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.382ns (Levels of Logic = 2)
+  Source:            SLIDE_SW<4> (PAD)
+  Destination:       Inst_adc/inst_p_to_s/s_out_8_LDC (LATCH)
+  Destination Clock: Inst_adc/inst_p_to_s/GND_186_o_p_in[8]_AND_15_o falling
+
+  Data Path: SLIDE_SW<4> to Inst_adc/inst_p_to_s/s_out_8_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            12   1.222   0.909  SLIDE_SW_4_IBUF (LED_4_OBUF)
+     LUT2:I1->O            2   0.205   0.616  Inst_adc/inst_p_to_s/GND_186_o_p_in[8]_AND_16_o1 (Inst_adc/inst_p_to_s/GND_186_o_p_in[8]_AND_16_o)
+     LDC:CLR                   0.430          Inst_adc/inst_p_to_s/s_out_8_LDC
+    ----------------------------------------
+    Total                      3.382ns (1.857ns logic, 1.525ns route)
+                                       (54.9% logic, 45.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Inst_adc/inst_p_to_s/GND_186_o_p_in[9]_AND_13_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.382ns (Levels of Logic = 2)
+  Source:            SLIDE_SW<5> (PAD)
+  Destination:       Inst_adc/inst_p_to_s/s_out_9_LDC (LATCH)
+  Destination Clock: Inst_adc/inst_p_to_s/GND_186_o_p_in[9]_AND_13_o falling
+
+  Data Path: SLIDE_SW<5> to Inst_adc/inst_p_to_s/s_out_9_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            12   1.222   0.909  SLIDE_SW_5_IBUF (LED_5_OBUF)
+     LUT2:I1->O            2   0.205   0.616  Inst_adc/inst_p_to_s/GND_186_o_p_in[9]_AND_14_o1 (Inst_adc/inst_p_to_s/GND_186_o_p_in[9]_AND_14_o)
+     LDC:CLR                   0.430          Inst_adc/inst_p_to_s/s_out_9_LDC
+    ----------------------------------------
+    Total                      3.382ns (1.857ns logic, 1.525ns route)
+                                       (54.9% logic, 45.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Inst_adc/inst_p_to_s/GND_186_o_p_in[10]_AND_11_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.330ns (Levels of Logic = 2)
+  Source:            SLIDE_SW<6> (PAD)
+  Destination:       Inst_adc/inst_p_to_s/s_out_10_LDC (LATCH)
+  Destination Clock: Inst_adc/inst_p_to_s/GND_186_o_p_in[10]_AND_11_o falling
+
+  Data Path: SLIDE_SW<6> to Inst_adc/inst_p_to_s/s_out_10_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            10   1.222   0.857  SLIDE_SW_6_IBUF (LED_6_OBUF)
+     LUT2:I1->O            2   0.205   0.616  Inst_adc/inst_p_to_s/GND_186_o_p_in[10]_AND_12_o1 (Inst_adc/inst_p_to_s/GND_186_o_p_in[10]_AND_12_o)
+     LDC:CLR                   0.430          Inst_adc/inst_p_to_s/s_out_10_LDC
+    ----------------------------------------
+    Total                      3.330ns (1.857ns logic, 1.473ns route)
+                                       (55.8% logic, 44.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Inst_adc/inst_p_to_s/GND_186_o_p_in[11]_AND_9_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.151ns (Levels of Logic = 2)
+  Source:            SLIDE_SW<7> (PAD)
+  Destination:       Inst_adc/inst_p_to_s/s_out_11_LDC (LATCH)
+  Destination Clock: Inst_adc/inst_p_to_s/GND_186_o_p_in[11]_AND_9_o falling
+
+  Data Path: SLIDE_SW<7> to Inst_adc/inst_p_to_s/s_out_11_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   1.222   0.715  SLIDE_SW_7_IBUF (LED_7_OBUF)
+     LUT2:I1->O            1   0.205   0.579  Inst_adc/inst_p_to_s/GND_186_o_p_in[11]_AND_10_o1 (Inst_adc/inst_p_to_s/GND_186_o_p_in[11]_AND_10_o)
+     LDC:CLR                   0.430          Inst_adc/inst_p_to_s/s_out_11_LDC
+    ----------------------------------------
+    Total                      3.151ns (1.857ns logic, 1.294ns route)
+                                       (58.9% logic, 41.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_LCD/CLK_400HZ'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              3.634ns (Levels of Logic = 1)
+  Source:            Inst_LCD/LCD_E (FF)
+  Destination:       LCD_E (PAD)
+  Source Clock:      Inst_LCD/CLK_400HZ rising
+
+  Data Path: Inst_LCD/LCD_E to LCD_E
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              2   0.447   0.616  Inst_LCD/LCD_E (Inst_LCD/LCD_E)
+     OBUF:I->O                 2.571          LCD_E_OBUF (LCD_E)
+    ----------------------------------------
+    Total                      3.634ns (3.018ns logic, 0.616ns route)
+                                       (83.0% logic, 17.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_SEVEN_SEGMENT/BCD_2'
+  Total number of paths / destination ports: 32 / 11
+-------------------------------------------------------------------------
+Offset:              4.872ns (Levels of Logic = 2)
+  Source:            Inst_SEVEN_SEGMENT/COUNT_BCD_1 (LATCH)
+  Destination:       sig_a (PAD)
+  Source Clock:      Inst_SEVEN_SEGMENT/BCD_2 rising
+
+  Data Path: Inst_SEVEN_SEGMENT/COUNT_BCD_1 to sig_a
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               7   0.498   1.021  Inst_SEVEN_SEGMENT/COUNT_BCD_1 (Inst_SEVEN_SEGMENT/COUNT_BCD_1)
+     LUT4:I0->O            1   0.203   0.579  Inst_SEVEN_SEGMENT/DISP<0>1 (sig_a_OBUF)
+     OBUF:I->O                 2.571          sig_a_OBUF (sig_a)
+    ----------------------------------------
+    Total                      4.872ns (3.272ns logic, 1.600ns route)
+                                       (67.2% logic, 32.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_adc/SCK1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            Inst_adc/inst_p_to_s/serial_out (FF)
+  Destination:       MOSI (PAD)
+  Source Clock:      Inst_adc/SCK1 falling
+
+  Data Path: Inst_adc/inst_p_to_s/serial_out to MOSI
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP_1:C->Q            1   0.447   0.579  Inst_adc/inst_p_to_s/serial_out (Inst_adc/inst_p_to_s/serial_out)
+     OBUF:I->O                 2.571          MOSI_OBUF (MOSI)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_adc/CNTR1_2'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              3.634ns (Levels of Logic = 1)
+  Source:            Inst_adc/SCK1 (FF)
+  Destination:       sck (PAD)
+  Source Clock:      Inst_adc/CNTR1_2 rising
+
+  Data Path: Inst_adc/SCK1 to sck
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.447   0.616  Inst_adc/SCK1 (Inst_adc/SCK1)
+     OBUF:I->O                 2.571          sck_OBUF (sck)
+    ----------------------------------------
+    Total                      3.634ns (3.018ns logic, 0.616ns route)
+                                       (83.0% logic, 17.0% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Delay:               4.701ns (Levels of Logic = 2)
+  Source:            SLIDE_SW<5> (PAD)
+  Destination:       LED<5> (PAD)
+
+  Data Path: SLIDE_SW<5> to LED<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            12   1.222   0.908  SLIDE_SW_5_IBUF (LED_5_OBUF)
+     OBUF:I->O                 2.571          LED_5_OBUF (LED<5>)
+    ----------------------------------------
+    Total                      4.701ns (3.793ns logic, 0.908ns route)
+                                       (80.7% logic, 19.3% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock Inst_LCD/CLK_400HZ
+------------------+---------+---------+---------+---------+
+                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------+---------+---------+---------+---------+
+Inst_LCD/CLK_400HZ|    3.891|         |         |         |
+reset             |    4.373|         |         |         |
+------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Inst_SEVEN_SEGMENT/BCD_2
+---------------------------+---------+---------+---------+---------+
+                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------+---------+---------+---------+---------+
+Inst_SEVEN_SEGMENT/COUNT_14|    1.960|         |         |         |
+---------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Inst_SEVEN_SEGMENT/COUNT_14
+---------------------------+---------+---------+---------+---------+
+                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------+---------+---------+---------+---------+
+Inst_SEVEN_SEGMENT/COUNT_14|    2.869|         |         |         |
+---------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Inst_adc/CNTR1_2
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+Inst_adc/CNTR1_2|    2.864|         |         |         |
+reset           |    3.150|         |         |         |
+----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Inst_adc/SCK1
+------------------------------------------------+---------+---------+---------+---------+
+                                                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------------------------+---------+---------+---------+---------+
+Inst_adc/CNTR1_2                                |         |         |    2.934|         |
+Inst_adc/SCK1                                   |         |         |    1.436|         |
+Inst_adc/inst_p_to_s/GND_186_o_p_in[10]_AND_11_o|         |         |    1.613|         |
+Inst_adc/inst_p_to_s/GND_186_o_p_in[11]_AND_9_o |         |         |    1.613|         |
+Inst_adc/inst_p_to_s/GND_186_o_p_in[4]_AND_23_o |         |         |    1.613|         |
+Inst_adc/inst_p_to_s/GND_186_o_p_in[5]_AND_21_o |         |         |    1.613|         |
+Inst_adc/inst_p_to_s/GND_186_o_p_in[6]_AND_19_o |         |         |    1.613|         |
+Inst_adc/inst_p_to_s/GND_186_o_p_in[7]_AND_17_o |         |         |    1.613|         |
+Inst_adc/inst_p_to_s/GND_186_o_p_in[8]_AND_15_o |         |         |    1.613|         |
+Inst_adc/inst_p_to_s/GND_186_o_p_in[9]_AND_13_o |         |         |    1.613|         |
+------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Inst_adc/inst_p_to_s/GND_186_o_p_in[10]_AND_11_o
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+Inst_adc/CNTR1_2|         |         |    2.934|         |
+----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Inst_adc/inst_p_to_s/GND_186_o_p_in[11]_AND_9_o
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+Inst_adc/CNTR1_2|         |         |    2.897|         |
+----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Inst_adc/inst_p_to_s/GND_186_o_p_in[4]_AND_23_o
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+Inst_adc/CNTR1_2|         |         |    2.934|         |
+----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Inst_adc/inst_p_to_s/GND_186_o_p_in[5]_AND_21_o
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+Inst_adc/CNTR1_2|         |         |    2.934|         |
+----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Inst_adc/inst_p_to_s/GND_186_o_p_in[6]_AND_19_o
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+Inst_adc/CNTR1_2|         |         |    2.934|         |
+----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Inst_adc/inst_p_to_s/GND_186_o_p_in[7]_AND_17_o
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+Inst_adc/CNTR1_2|         |         |    2.934|         |
+----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Inst_adc/inst_p_to_s/GND_186_o_p_in[8]_AND_15_o
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+Inst_adc/CNTR1_2|         |         |    2.934|         |
+----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Inst_adc/inst_p_to_s/GND_186_o_p_in[9]_AND_13_o
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+Inst_adc/CNTR1_2|         |         |    2.934|         |
+----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_12mhz
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_12mhz      |    3.926|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 11.02 secs
+ 
+--> 
+
+Total memory usage is 244640 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   59 (   0 filtered)
+Number of infos    :   13 (   0 filtered)
+

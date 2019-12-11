@@ -1,0 +1,1033 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.22 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.22 secs
+ 
+--> Reading design: TOP.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "TOP.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "TOP"
+Output Format                      : NGC
+Target Device                      : xc6slx9-2-tqg144
+
+---- Source Options
+Top Module Name                    : TOP
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "E:\KITCODE\reinfold\adc_stp\P2S.v" into library work
+Parsing module <P_to_S>.
+Analyzing Verilog file "E:\KITCODE\reinfold\adc_stp\bintobcd.v" into library work
+Parsing module <binbcd16>.
+Parsing VHDL file "E:\KITCODE\reinfold\adc_stp\sipo.vhd" into library work
+Parsing entity <SIPO_code>.
+Parsing architecture <Behavioral> of entity <sipo_code>.
+Parsing VHDL file "E:\KITCODE\reinfold\adc_stp\st_mtr.vhd" into library work
+Parsing entity <StepperMotor>.
+Parsing architecture <bhe> of entity <steppermotor>.
+Parsing VHDL file "E:\KITCODE\reinfold\adc_stp\LCD_CNTROL.vhd" into library work
+Parsing entity <LCD>.
+Parsing architecture <a> of entity <lcd>.
+Parsing VHDL file "E:\KITCODE\reinfold\adc_stp\dcm.vhd" into library work
+Parsing entity <dcm>.
+Parsing architecture <BEHAVIORAL> of entity <dcm>.
+Parsing VHDL file "E:\KITCODE\reinfold\adc_stp\adc.vhd" into library work
+Parsing entity <adc>.
+Parsing architecture <Behavioral> of entity <adc>.
+Parsing VHDL file "E:\KITCODE\reinfold\adc_stp\top.vhd" into library work
+Parsing entity <TOP>.
+Parsing architecture <BEHAVIORAL> of entity <top>.
+WARNING:HDLCompiler:946 - "E:\KITCODE\reinfold\adc_stp\top.vhd" Line 187: Actual for formal port reset is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "E:\KITCODE\reinfold\adc_stp\top.vhd" Line 301: Actual for formal port reset is neither a static name nor a globally static expression
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <TOP> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <dcm> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <LCD> (architecture <a>) from library <work>.
+Going to verilog side to elaborate module binbcd16
+
+Elaborating module <binbcd16>.
+WARNING:HDLCompiler:413 - "E:\KITCODE\reinfold\adc_stp\bintobcd.v" Line 19: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "E:\KITCODE\reinfold\adc_stp\bintobcd.v" Line 21: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "E:\KITCODE\reinfold\adc_stp\bintobcd.v" Line 23: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "E:\KITCODE\reinfold\adc_stp\bintobcd.v" Line 25: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "E:\KITCODE\reinfold\adc_stp\bintobcd.v" Line 36: Result of 20-bit expression is truncated to fit in 19-bit target.
+Back to vhdl to continue elaboration
+Going to verilog side to elaborate module binbcd16
+Back to vhdl to continue elaboration
+Going to verilog side to elaborate module binbcd16
+Back to vhdl to continue elaboration
+Going to verilog side to elaborate module binbcd16
+Back to vhdl to continue elaboration
+
+Elaborating entity <adc> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "E:\KITCODE\reinfold\adc_stp\adc.vhd" Line 53: reset should be on the sensitivity list of the process
+INFO:HDLCompiler:679 - "E:\KITCODE\reinfold\adc_stp\adc.vhd" Line 128. Case statement is complete. others clause is never selected
+Going to verilog side to elaborate module P_to_S
+
+Elaborating module <P_to_S>.
+Back to vhdl to continue elaboration
+
+Elaborating entity <SIPO_code> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <StepperMotor> (architecture <bhe>) from library <work>.
+INFO:HDLCompiler:679 - "E:\KITCODE\reinfold\adc_stp\st_mtr.vhd" Line 71. Case statement is complete. others clause is never selected
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <TOP>.
+    Related source file is "E:\KITCODE\reinfold\adc_stp\top.vhd".
+WARNING:Xst:647 - Input <SLIDE_SW<7:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "E:\KITCODE\reinfold\adc_stp\top.vhd" line 175: Output port <CLK0_OUT> of the instance <Inst_dcm> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\KITCODE\reinfold\adc_stp\top.vhd" line 175: Output port <LOCKED_OUT> of the instance <Inst_dcm> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\KITCODE\reinfold\adc_stp\top.vhd" line 186: Output port <LCD_RW> of the instance <INST_LCD> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <TOP> synthesized.
+
+Synthesizing Unit <dcm>.
+    Related source file is "E:\KITCODE\reinfold\adc_stp\dcm.vhd".
+    Summary:
+	no macro.
+Unit <dcm> synthesized.
+
+Synthesizing Unit <LCD>.
+    Related source file is "E:\KITCODE\reinfold\adc_stp\LCD_CNTROL.vhd".
+    Found 1-bit register for signal <LCD_E>.
+    Found 8-bit register for signal <DATA_BUS_VALUE>.
+    Found 5-bit register for signal <next_command>.
+    Found 5-bit register for signal <state>.
+    Found 1-bit register for signal <LCD_RS>.
+    Found 1-bit register for signal <LCD_RW>.
+    Found 1-bit register for signal <CLK_400HZ>.
+    Found 1-bit register for signal <LINE>.
+    Found 16-bit register for signal <CLK_COUNT_400HZ>.
+    Found 16-bit adder for signal <CLK_COUNT_400HZ[15]_GND_10_o_add_2_OUT> created at line 50.
+    Found 16-bit comparator greater for signal <CLK_COUNT_400HZ[15]_GND_10_o_LessThan_2_o> created at line 49
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  38 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred  50 Multiplexer(s).
+Unit <LCD> synthesized.
+
+Synthesizing Unit <binbcd16>.
+    Related source file is "E:\KITCODE\reinfold\adc_stp\bintobcd.v".
+    Found 4-bit adder for signal <n0316> created at line 19.
+    Found 4-bit adder for signal <B[15]_GND_112_o_add_3_OUT> created at line 19.
+    Found 4-bit adder for signal <B[14]_GND_112_o_add_5_OUT> created at line 19.
+    Found 4-bit adder for signal <B[13]_GND_112_o_add_7_OUT> created at line 19.
+    Found 4-bit adder for signal <n0324> created at line 21.
+    Found 4-bit adder for signal <B[12]_GND_112_o_add_11_OUT> created at line 19.
+    Found 4-bit adder for signal <GND_112_o_GND_112_o_add_13_OUT> created at line 21.
+    Found 4-bit adder for signal <B[11]_GND_112_o_add_15_OUT> created at line 19.
+    Found 4-bit adder for signal <B[15]_GND_112_o_add_17_OUT> created at line 21.
+    Found 4-bit adder for signal <B[10]_GND_112_o_add_19_OUT> created at line 19.
+    Found 4-bit adder for signal <B[14]_GND_112_o_add_21_OUT> created at line 21.
+    Found 4-bit adder for signal <n0338> created at line 23.
+    Found 4-bit adder for signal <B[9]_GND_112_o_add_25_OUT> created at line 19.
+    Found 4-bit adder for signal <B[13]_GND_112_o_add_27_OUT> created at line 21.
+    Found 4-bit adder for signal <GND_112_o_GND_112_o_add_29_OUT> created at line 23.
+    Found 4-bit adder for signal <B[8]_GND_112_o_add_31_OUT> created at line 19.
+    Found 4-bit adder for signal <B[12]_GND_112_o_add_33_OUT> created at line 21.
+    Found 4-bit adder for signal <GND_112_o_GND_112_o_add_35_OUT> created at line 23.
+    Found 4-bit adder for signal <B[7]_GND_112_o_add_37_OUT> created at line 19.
+    Found 4-bit adder for signal <B[11]_GND_112_o_add_39_OUT> created at line 21.
+    Found 4-bit adder for signal <B[15]_GND_112_o_add_41_OUT> created at line 23.
+    Found 4-bit adder for signal <n0358> created at line 25.
+    Found 4-bit adder for signal <B[6]_GND_112_o_add_45_OUT> created at line 19.
+    Found 4-bit adder for signal <B[10]_GND_112_o_add_47_OUT> created at line 21.
+    Found 4-bit adder for signal <B[14]_GND_112_o_add_49_OUT> created at line 23.
+    Found 4-bit adder for signal <GND_112_o_GND_112_o_add_51_OUT> created at line 25.
+    Found 4-bit adder for signal <B[5]_GND_112_o_add_53_OUT> created at line 19.
+    Found 4-bit adder for signal <B[9]_GND_112_o_add_55_OUT> created at line 21.
+    Found 4-bit adder for signal <B[13]_GND_112_o_add_57_OUT> created at line 23.
+    Found 4-bit adder for signal <GND_112_o_GND_112_o_add_59_OUT> created at line 25.
+    Found 4-bit adder for signal <B[4]_GND_112_o_add_61_OUT> created at line 19.
+    Found 4-bit adder for signal <B[8]_GND_112_o_add_63_OUT> created at line 21.
+    Found 4-bit adder for signal <B[12]_GND_112_o_add_65_OUT> created at line 23.
+    Found 4-bit adder for signal <GND_112_o_GND_112_o_add_67_OUT> created at line 25.
+    Found 3-bit adder for signal <n0245> created at line 28.
+    Found 3-bit comparator greater for signal <PWR_40_o_B[15]_LessThan_1_o> created at line 18
+    Found 4-bit comparator greater for signal <GND_112_o_B[15]_LessThan_3_o> created at line 18
+    Found 4-bit comparator greater for signal <GND_112_o_B[14]_LessThan_5_o> created at line 18
+    Found 4-bit comparator greater for signal <GND_112_o_B[13]_LessThan_7_o> created at line 18
+    Found 3-bit comparator greater for signal <PWR_40_o_GND_112_o_LessThan_9_o> created at line 20
+    Found 4-bit comparator greater for signal <GND_112_o_B[12]_LessThan_11_o> created at line 18
+    Found 4-bit comparator greater for signal <GND_112_o_GND_112_o_LessThan_13_o> created at line 20
+    Found 4-bit comparator greater for signal <GND_112_o_B[11]_LessThan_15_o> created at line 18
+    Found 4-bit comparator greater for signal <GND_112_o_B[15]_LessThan_17_o> created at line 20
+    Found 4-bit comparator greater for signal <GND_112_o_B[10]_LessThan_19_o> created at line 18
+    Found 4-bit comparator greater for signal <GND_112_o_B[14]_LessThan_21_o> created at line 20
+    Found 3-bit comparator greater for signal <PWR_40_o_GND_112_o_LessThan_23_o> created at line 22
+    Found 4-bit comparator greater for signal <GND_112_o_B[9]_LessThan_25_o> created at line 18
+    Found 4-bit comparator greater for signal <GND_112_o_B[13]_LessThan_27_o> created at line 20
+    Found 4-bit comparator greater for signal <GND_112_o_GND_112_o_LessThan_29_o> created at line 22
+    Found 4-bit comparator greater for signal <GND_112_o_B[8]_LessThan_31_o> created at line 18
+    Found 4-bit comparator greater for signal <GND_112_o_B[12]_LessThan_33_o> created at line 20
+    Found 4-bit comparator greater for signal <GND_112_o_GND_112_o_LessThan_35_o> created at line 22
+    Found 4-bit comparator greater for signal <GND_112_o_B[7]_LessThan_37_o> created at line 18
+    Found 4-bit comparator greater for signal <GND_112_o_B[11]_LessThan_39_o> created at line 20
+    Found 4-bit comparator greater for signal <GND_112_o_B[15]_LessThan_41_o> created at line 22
+    Found 3-bit comparator greater for signal <PWR_40_o_GND_112_o_LessThan_43_o> created at line 24
+    Found 4-bit comparator greater for signal <GND_112_o_B[6]_LessThan_45_o> created at line 18
+    Found 4-bit comparator greater for signal <GND_112_o_B[10]_LessThan_47_o> created at line 20
+    Found 4-bit comparator greater for signal <GND_112_o_B[14]_LessThan_49_o> created at line 22
+    Found 4-bit comparator greater for signal <GND_112_o_GND_112_o_LessThan_51_o> created at line 24
+    Found 4-bit comparator greater for signal <GND_112_o_B[5]_LessThan_53_o> created at line 18
+    Found 4-bit comparator greater for signal <GND_112_o_B[9]_LessThan_55_o> created at line 20
+    Found 4-bit comparator greater for signal <GND_112_o_B[13]_LessThan_57_o> created at line 22
+    Found 4-bit comparator greater for signal <GND_112_o_GND_112_o_LessThan_59_o> created at line 24
+    Found 4-bit comparator greater for signal <GND_112_o_B[4]_LessThan_61_o> created at line 18
+    Found 4-bit comparator greater for signal <GND_112_o_B[8]_LessThan_63_o> created at line 20
+    Found 4-bit comparator greater for signal <GND_112_o_B[12]_LessThan_65_o> created at line 22
+    Found 4-bit comparator greater for signal <GND_112_o_GND_112_o_LessThan_67_o> created at line 24
+    Found 3-bit comparator greater for signal <PWR_40_o_GND_112_o_LessThan_69_o> created at line 27
+    Summary:
+	inferred  35 Adder/Subtractor(s).
+	inferred  35 Comparator(s).
+	inferred 138 Multiplexer(s).
+Unit <binbcd16> synthesized.
+
+Synthesizing Unit <adc>.
+    Related source file is "E:\KITCODE\reinfold\adc_stp\adc.vhd".
+    Found 1-bit register for signal <cs>.
+    Found 1-bit register for signal <en>.
+    Found 4-bit register for signal <T2>.
+    Found 2-bit register for signal <CH_ADD>.
+    Found 3-bit register for signal <M_state>.
+    Found 1-bit register for signal <LAT>.
+    Found 1-bit register for signal <sck1>.
+    Found 1-bit register for signal <sck2>.
+    Found 12-bit register for signal <DATA_OUT_CH4>.
+    Found 12-bit register for signal <DATA_OUT_CH1>.
+    Found 12-bit register for signal <DATA_OUT_CH3>.
+    Found 12-bit register for signal <DATA_OUT_CH2>.
+    Found finite state machine <FSM_0> for signal <M_state>.
+    -----------------------------------------------------------------------
+    | States             | 8                                              |
+    | Transitions        | 10                                             |
+    | Inputs             | 2                                              |
+    | Outputs            | 8                                              |
+    | Clock              | clk_1mhz (rising_edge)                         |
+    | Reset              | reset (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | st1                                            |
+    | Power Up State     | st1                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 2-bit adder for signal <CH_ADD[1]_GND_113_o_add_5_OUT> created at line 110.
+    Found 4-bit adder for signal <T2[3]_GND_113_o_add_6_OUT> created at line 114.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  59 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <adc> synthesized.
+
+Synthesizing Unit <P_to_S>.
+    Related source file is "E:\KITCODE\reinfold\adc_stp\P2S.v".
+    Found 1-bit register for signal <serial_out>.
+    Found 1-bit register for signal <s_out<5>>.
+    Found 1-bit register for signal <s_out<4>>.
+    Found 1-bit register for signal <s_out<3>>.
+    Found 1-bit register for signal <s_out<2>>.
+    Found 1-bit register for signal <s_out<1>>.
+    Found 1-bit register for signal <s_out<0>>.
+    Summary:
+	inferred   7 D-type flip-flop(s).
+Unit <P_to_S> synthesized.
+
+Synthesizing Unit <SIPO_code>.
+    Related source file is "E:\KITCODE\reinfold\adc_stp\sipo.vhd".
+    Found 12-bit register for signal <DATA_OUT>.
+    Found 12-bit register for signal <temp>.
+    Summary:
+	inferred  24 D-type flip-flop(s).
+Unit <SIPO_code> synthesized.
+
+Synthesizing Unit <StepperMotor>.
+    Related source file is "E:\KITCODE\reinfold\adc_stp\st_mtr.vhd".
+    Found 1-bit register for signal <InternalStepEnable>.
+    Found 2-bit register for signal <state>.
+    Found 4-bit register for signal <StepDrive>.
+    Found 32-bit register for signal <StepCounter>.
+    Found 32-bit adder for signal <StepCounter[31]_GND_117_o_add_0_OUT> created at line 31.
+    Found 2-bit adder for signal <state[1]_GND_117_o_add_2_OUT> created at line 50.
+    Found 2-bit subtractor for signal <GND_117_o_GND_117_o_sub_5_OUT<1:0>> created at line 51.
+    Found 4x4-bit Read Only RAM for signal <state[1]_GND_117_o_wide_mux_6_OUT>
+    Found 32-bit comparator greater for signal <n0002> created at line 39
+    Summary:
+	inferred   1 RAM(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  39 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <StepperMotor> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 4x4-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 145
+ 16-bit adder                                          : 1
+ 2-bit adder                                           : 1
+ 2-bit addsub                                          : 1
+ 3-bit adder                                           : 4
+ 32-bit adder                                          : 1
+ 4-bit adder                                           : 137
+# Registers                                            : 32
+ 1-bit register                                        : 17
+ 12-bit register                                       : 6
+ 16-bit register                                       : 1
+ 2-bit register                                        : 2
+ 32-bit register                                       : 1
+ 4-bit register                                        : 2
+ 5-bit register                                        : 2
+ 8-bit register                                        : 1
+# Comparators                                          : 142
+ 16-bit comparator greater                             : 1
+ 3-bit comparator greater                              : 20
+ 32-bit comparator greater                             : 1
+ 4-bit comparator greater                              : 120
+# Multiplexers                                         : 607
+ 1-bit 2-to-1 multiplexer                              : 562
+ 16-bit 2-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 3
+ 5-bit 2-to-1 multiplexer                              : 14
+ 8-bit 2-to-1 multiplexer                              : 27
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <temp_11> in Unit <Inst_SIPO_code> is equivalent to the following FF/Latch, which will be removed : <DATA_OUT_10> 
+INFO:Xst:2261 - The FF/Latch <temp_1> in Unit <Inst_SIPO_code> is equivalent to the following FF/Latch, which will be removed : <DATA_OUT_0> 
+INFO:Xst:2261 - The FF/Latch <temp_2> in Unit <Inst_SIPO_code> is equivalent to the following FF/Latch, which will be removed : <DATA_OUT_1> 
+INFO:Xst:2261 - The FF/Latch <temp_3> in Unit <Inst_SIPO_code> is equivalent to the following FF/Latch, which will be removed : <DATA_OUT_2> 
+INFO:Xst:2261 - The FF/Latch <temp_4> in Unit <Inst_SIPO_code> is equivalent to the following FF/Latch, which will be removed : <DATA_OUT_3> 
+INFO:Xst:2261 - The FF/Latch <temp_5> in Unit <Inst_SIPO_code> is equivalent to the following FF/Latch, which will be removed : <DATA_OUT_4> 
+INFO:Xst:2261 - The FF/Latch <temp_6> in Unit <Inst_SIPO_code> is equivalent to the following FF/Latch, which will be removed : <DATA_OUT_5> 
+INFO:Xst:2261 - The FF/Latch <temp_7> in Unit <Inst_SIPO_code> is equivalent to the following FF/Latch, which will be removed : <DATA_OUT_6> 
+INFO:Xst:2261 - The FF/Latch <temp_8> in Unit <Inst_SIPO_code> is equivalent to the following FF/Latch, which will be removed : <DATA_OUT_7> 
+INFO:Xst:2261 - The FF/Latch <temp_9> in Unit <Inst_SIPO_code> is equivalent to the following FF/Latch, which will be removed : <DATA_OUT_8> 
+INFO:Xst:2261 - The FF/Latch <temp_10> in Unit <Inst_SIPO_code> is equivalent to the following FF/Latch, which will be removed : <DATA_OUT_9> 
+
+Synthesizing (advanced) Unit <LCD>.
+The following registers are absorbed into counter <CLK_COUNT_400HZ>: 1 register on signal <CLK_COUNT_400HZ>.
+Unit <LCD> synthesized (advanced).
+
+Synthesizing (advanced) Unit <StepperMotor>.
+The following registers are absorbed into counter <StepCounter>: 1 register on signal <StepCounter>.
+The following registers are absorbed into counter <state>: 1 register on signal <state>.
+INFO:Xst:3231 - The small RAM <Mram_state[1]_GND_117_o_wide_mux_6_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 4-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <StepperMotor> synthesized (advanced).
+
+Synthesizing (advanced) Unit <adc>.
+The following registers are absorbed into counter <CH_ADD>: 1 register on signal <CH_ADD>.
+Unit <adc> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 4x4-bit single-port distributed Read Only RAM         : 1
+# Adders/Subtractors                                   : 141
+ 2-bit adder                                           : 4
+ 4-bit adder                                           : 137
+# Counters                                             : 4
+ 16-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+ 2-bit updown counter                                  : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 115
+ Flip-Flops                                            : 115
+# Comparators                                          : 142
+ 16-bit comparator greater                             : 1
+ 3-bit comparator greater                              : 20
+ 32-bit comparator greater                             : 1
+ 4-bit comparator greater                              : 120
+# Multiplexers                                         : 606
+ 1-bit 2-to-1 multiplexer                              : 562
+ 4-bit 2-to-1 multiplexer                              : 3
+ 5-bit 2-to-1 multiplexer                              : 14
+ 8-bit 2-to-1 multiplexer                              : 27
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <temp_11> in Unit <SIPO_code> is equivalent to the following FF/Latch, which will be removed : <DATA_OUT_10> 
+INFO:Xst:2261 - The FF/Latch <temp_1> in Unit <SIPO_code> is equivalent to the following FF/Latch, which will be removed : <DATA_OUT_0> 
+INFO:Xst:2261 - The FF/Latch <temp_2> in Unit <SIPO_code> is equivalent to the following FF/Latch, which will be removed : <DATA_OUT_1> 
+INFO:Xst:2261 - The FF/Latch <temp_3> in Unit <SIPO_code> is equivalent to the following FF/Latch, which will be removed : <DATA_OUT_2> 
+INFO:Xst:2261 - The FF/Latch <temp_4> in Unit <SIPO_code> is equivalent to the following FF/Latch, which will be removed : <DATA_OUT_3> 
+INFO:Xst:2261 - The FF/Latch <temp_5> in Unit <SIPO_code> is equivalent to the following FF/Latch, which will be removed : <DATA_OUT_4> 
+INFO:Xst:2261 - The FF/Latch <temp_6> in Unit <SIPO_code> is equivalent to the following FF/Latch, which will be removed : <DATA_OUT_5> 
+INFO:Xst:2261 - The FF/Latch <temp_7> in Unit <SIPO_code> is equivalent to the following FF/Latch, which will be removed : <DATA_OUT_6> 
+INFO:Xst:2261 - The FF/Latch <temp_8> in Unit <SIPO_code> is equivalent to the following FF/Latch, which will be removed : <DATA_OUT_7> 
+INFO:Xst:2261 - The FF/Latch <temp_9> in Unit <SIPO_code> is equivalent to the following FF/Latch, which will be removed : <DATA_OUT_8> 
+INFO:Xst:2261 - The FF/Latch <temp_10> in Unit <SIPO_code> is equivalent to the following FF/Latch, which will be removed : <DATA_OUT_9> 
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <INST_ADC/FSM_0> on signal <M_state[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ st1   | 000
+ st2   | 001
+ st3   | 010
+ st4   | 011
+ st5   | 100
+ st6   | 101
+ st7   | 110
+ st8   | 111
+-------------------
+WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
+   incompatible with the Spartan6 architecture. The two primary causes of this is
+   either a register or latch described with both an asynchronous set and
+   asynchronous reset, or a register or latch described with an asynchronous
+   set or reset which however has an initialization value of the opposite 
+   polarity (i.e. asynchronous reset with an initialization value of 1).
+    While this circuit can be built, it creates a sub-optimal implementation
+   in terms of area, power and performance. For a more optimal implementation
+   Xilinx highly recommends one of the following:
+
+          1) Remove either the set or reset from all registers and latches
+             if not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Ensure all registers have the same initialization value as the
+             described asynchronous set or reset polarity
+          4) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Spartan6 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    s_out_2 in unit <P_to_S>
+    s_out_3 in unit <P_to_S>
+
+
+  List of register instances with asynchronous set or reset and opposite initialization value:
+    state_4 in unit <LCD>
+    state_2 in unit <LCD>
+    state_1 in unit <LCD>
+
+
+Optimizing unit <SIPO_code> ...
+
+Optimizing unit <TOP> ...
+
+Optimizing unit <adc> ...
+
+Optimizing unit <P_to_S> ...
+
+Optimizing unit <StepperMotor> ...
+
+Optimizing unit <LCD> ...
+
+Optimizing unit <binbcd16> ...
+WARNING:Xst:1710 - FF/Latch <INST_LCD/CLK_COUNT_400HZ_14> (without init value) has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <INST_LCD/CLK_COUNT_400HZ_15> (without init value) has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Inst_StepperMotor/StepCounter_16> (without init value) has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Inst_StepperMotor/StepCounter_17> (without init value) has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Inst_StepperMotor/StepCounter_18> (without init value) has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Inst_StepperMotor/StepCounter_19> (without init value) has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Inst_StepperMotor/StepCounter_20> (without init value) has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Inst_StepperMotor/StepCounter_21> (without init value) has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Inst_StepperMotor/StepCounter_22> (without init value) has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Inst_StepperMotor/StepCounter_23> (without init value) has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Inst_StepperMotor/StepCounter_24> (without init value) has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Inst_StepperMotor/StepCounter_25> (without init value) has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Inst_StepperMotor/StepCounter_26> (without init value) has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Inst_StepperMotor/StepCounter_27> (without init value) has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Inst_StepperMotor/StepCounter_28> (without init value) has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Inst_StepperMotor/StepCounter_29> (without init value) has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Inst_StepperMotor/StepCounter_30> (without init value) has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Inst_StepperMotor/StepCounter_31> (without init value) has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block TOP, actual ratio is 7.
+WARNING:Xst:1426 - The value init of the FF/Latch INST_LCD/state_4_LD hinder the constant cleaning in the block TOP.
+   You should achieve better results by setting this init to 1.
+FlipFlop INST_LCD/LINE has been replicated 1 time(s)
+FlipFlop INST_LCD/state_0 has been replicated 1 time(s)
+FlipFlop INST_LCD/state_3 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+Processing Unit <TOP> :
+	Found 2-bit shift register for signal <INST_ADC/Inst_SIPO_code/temp_1>.
+Unit <TOP> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 147
+ Flip-Flops                                            : 147
+# Shift Registers                                      : 1
+ 2-bit shift register                                  : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : TOP.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 444
+#      GND                         : 1
+#      INV                         : 7
+#      LUT1                        : 17
+#      LUT2                        : 27
+#      LUT3                        : 25
+#      LUT4                        : 17
+#      LUT5                        : 60
+#      LUT6                        : 221
+#      MUXCY                       : 36
+#      MUXF7                       : 2
+#      VCC                         : 1
+#      XORCY                       : 30
+# FlipFlops/Latches                : 151
+#      FD                          : 37
+#      FDC                         : 7
+#      FDC_1                       : 2
+#      FDCE                        : 15
+#      FDE                         : 52
+#      FDP                         : 3
+#      FDP_1                       : 7
+#      FDPE                        : 10
+#      FDR                         : 14
+#      FDRE                        : 1
+#      LD                          : 1
+#      LDC                         : 2
+# Shift Registers                  : 1
+#      SRLC16E                     : 1
+# Clock Buffers                    : 5
+#      BUFG                        : 5
+# IO Buffers                       : 31
+#      IBUF                        : 5
+#      IBUFG                       : 1
+#      OBUF                        : 25
+# DCMs                             : 1
+#      DCM_SP                      : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             151  out of  11440     1%  
+ Number of Slice LUTs:                  375  out of   5720     6%  
+    Number used as Logic:               374  out of   5720     6%  
+    Number used as Memory:                1  out of   1440     0%  
+       Number used as SRL:                1
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    429
+   Number with an unused Flip Flop:     278  out of    429    64%  
+   Number with an unused LUT:            54  out of    429    12%  
+   Number of fully used LUT-FF pairs:    97  out of    429    22%  
+   Number of unique control sets:        30
+
+IO Utilization: 
+ Number of IOs:                          36
+ Number of bonded IOBs:                  31  out of    102    30%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                5  out of     16    31%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------------------------------------------------------------+------------------------------------------+-------+
+Clock Signal                                                                                     | Clock buffer(FF name)                    | Load  |
+-------------------------------------------------------------------------------------------------+------------------------------------------+-------+
+CLK_12MHZ                                                                                        | DCM_SP:CLKDV                             | 62    |
+INST_ADC/sck2                                                                                    | NONE(INST_ADC/Inst_SIPO_code/DATA_OUT_11)| 13    |
+CLK_12MHZ                                                                                        | IBUFG+BUFG                               | 38    |
+INST_LCD/CLK_400HZ                                                                               | BUFG                                     | 27    |
+INST_ADC/sck1                                                                                    | NONE(INST_ADC/Inst_P_to_S/serial_out)    | 9     |
+INST_ADC/Inst_P_to_S/GND_114_o_p_in[2]_AND_7_o(INST_ADC/Inst_P_to_S/GND_114_o_p_in[2]_AND_7_o1:O)| NONE(*)(INST_ADC/Inst_P_to_S/s_out_2_LDC)| 1     |
+INST_ADC/Inst_P_to_S/GND_114_o_p_in[3]_AND_5_o(INST_ADC/Inst_P_to_S/GND_114_o_p_in[3]_AND_5_o1:O)| NONE(*)(INST_ADC/Inst_P_to_S/s_out_3_LDC)| 1     |
+RESET                                                                                            | IBUF+BUFG                                | 1     |
+-------------------------------------------------------------------------------------------------+------------------------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 5.318ns (Maximum Frequency: 188.041MHz)
+   Minimum input arrival time before clock: 4.665ns
+   Maximum output required time after clock: 5.499ns
+   Maximum combinational path delay: 5.080ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK_12MHZ'
+  Clock period: 4.943ns (frequency: 202.296MHz)
+  Total number of paths / destination ports: 2231 / 112
+-------------------------------------------------------------------------
+Delay:               4.943ns (Levels of Logic = 10)
+  Source:            INST_LCD/CLK_COUNT_400HZ_8 (FF)
+  Destination:       INST_LCD/CLK_COUNT_400HZ_13 (FF)
+  Source Clock:      CLK_12MHZ rising
+  Destination Clock: CLK_12MHZ rising
+
+  Data Path: INST_LCD/CLK_COUNT_400HZ_8 to INST_LCD/CLK_COUNT_400HZ_13
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.525   1.181  INST_LCD/CLK_COUNT_400HZ_8 (INST_LCD/CLK_COUNT_400HZ_8)
+     LUT6:I0->O           13   0.254   1.098  INST_LCD/CLK_COUNT_400HZ[15]_GND_10_o_LessThan_2_o_inv1_inv21 (INST_LCD/CLK_COUNT_400HZ[15]_GND_10_o_LessThan_2_o_inv1_inv2)
+     LUT6:I5->O            3   0.254   0.766  INST_LCD/CLK_COUNT_400HZ[15]_GND_10_o_LessThan_2_o_inv1_inv22 (INST_LCD/CLK_COUNT_400HZ[15]_GND_10_o_LessThan_2_o_inv1_inv)
+     LUT2:I1->O            1   0.254   0.000  INST_LCD/Mcount_CLK_COUNT_400HZ_lut<7> (INST_LCD/Mcount_CLK_COUNT_400HZ_lut<7>)
+     MUXCY:S->O            1   0.215   0.000  INST_LCD/Mcount_CLK_COUNT_400HZ_cy<7> (INST_LCD/Mcount_CLK_COUNT_400HZ_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  INST_LCD/Mcount_CLK_COUNT_400HZ_cy<8> (INST_LCD/Mcount_CLK_COUNT_400HZ_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  INST_LCD/Mcount_CLK_COUNT_400HZ_cy<9> (INST_LCD/Mcount_CLK_COUNT_400HZ_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  INST_LCD/Mcount_CLK_COUNT_400HZ_cy<10> (INST_LCD/Mcount_CLK_COUNT_400HZ_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  INST_LCD/Mcount_CLK_COUNT_400HZ_cy<11> (INST_LCD/Mcount_CLK_COUNT_400HZ_cy<11>)
+     MUXCY:CI->O           0   0.023   0.000  INST_LCD/Mcount_CLK_COUNT_400HZ_cy<12> (INST_LCD/Mcount_CLK_COUNT_400HZ_cy<12>)
+     XORCY:CI->O           1   0.206   0.000  INST_LCD/Mcount_CLK_COUNT_400HZ_xor<13> (INST_LCD/Mcount_CLK_COUNT_400HZ13)
+     FDR:D                     0.074          INST_LCD/CLK_COUNT_400HZ_13
+    ----------------------------------------
+    Total                      4.943ns (1.898ns logic, 3.045ns route)
+                                       (38.4% logic, 61.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'INST_ADC/sck2'
+  Clock period: 1.820ns (frequency: 549.451MHz)
+  Total number of paths / destination ports: 12 / 12
+-------------------------------------------------------------------------
+Delay:               1.820ns (Levels of Logic = 0)
+  Source:            INST_ADC/Inst_SIPO_code/Mshreg_temp_1 (FF)
+  Destination:       INST_ADC/Inst_SIPO_code/temp_1 (FF)
+  Source Clock:      INST_ADC/sck2 rising
+  Destination Clock: INST_ADC/sck2 rising
+
+  Data Path: INST_ADC/Inst_SIPO_code/Mshreg_temp_1 to INST_ADC/Inst_SIPO_code/temp_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     SRLC16E:CLK->Q        1   1.746   0.000  INST_ADC/Inst_SIPO_code/Mshreg_temp_1 (INST_ADC/Inst_SIPO_code/Mshreg_temp_1)
+     FDE:D                     0.074          INST_ADC/Inst_SIPO_code/temp_1
+    ----------------------------------------
+    Total                      1.820ns (1.820ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'INST_LCD/CLK_400HZ'
+  Clock period: 5.318ns (frequency: 188.041MHz)
+  Total number of paths / destination ports: 521 / 44
+-------------------------------------------------------------------------
+Delay:               5.318ns (Levels of Logic = 4)
+  Source:            INST_LCD/state_3_1 (FF)
+  Destination:       INST_LCD/DATA_BUS_VALUE_2 (FF)
+  Source Clock:      INST_LCD/CLK_400HZ rising
+  Destination Clock: INST_LCD/CLK_400HZ rising
+
+  Data Path: INST_LCD/state_3_1 to INST_LCD/DATA_BUS_VALUE_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.525   1.156  INST_LCD/state_3_1 (INST_LCD/state_3_1)
+     LUT6:I1->O            3   0.254   0.874  INST_LCD/Mmux_state[4]_X_9_o_wide_mux_30_OUT431 (INST_LCD/Mmux_state[4]_X_9_o_wide_mux_30_OUT133)
+     LUT5:I3->O            1   0.250   0.910  INST_LCD/Mmux_state[4]_X_9_o_wide_mux_30_OUT1022 (INST_LCD/Mmux_state[4]_X_9_o_wide_mux_30_OUT1022)
+     LUT6:I3->O            1   0.235   0.790  INST_LCD/Mmux_state[4]_X_9_o_wide_mux_30_OUT1023 (INST_LCD/Mmux_state[4]_X_9_o_wide_mux_30_OUT1023)
+     LUT3:I1->O            1   0.250   0.000  INST_LCD/Mmux_state[4]_X_9_o_wide_mux_30_OUT1024 (INST_LCD/state[4]_X_9_o_wide_mux_30_OUT<2>)
+     FDCE:D                    0.074          INST_LCD/DATA_BUS_VALUE_2
+    ----------------------------------------
+    Total                      5.318ns (1.588ns logic, 3.730ns route)
+                                       (29.9% logic, 70.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'INST_ADC/sck1'
+  Clock period: 1.639ns (frequency: 610.128MHz)
+  Total number of paths / destination ports: 11 / 8
+-------------------------------------------------------------------------
+Delay:               1.639ns (Levels of Logic = 1)
+  Source:            INST_ADC/Inst_P_to_S/s_out_2_C_2 (FF)
+  Destination:       INST_ADC/Inst_P_to_S/s_out_1 (FF)
+  Source Clock:      INST_ADC/sck1 falling
+  Destination Clock: INST_ADC/sck1 falling
+
+  Data Path: INST_ADC/Inst_P_to_S/s_out_2_C_2 to INST_ADC/Inst_P_to_S/s_out_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC_1:C->Q            1   0.525   0.790  INST_ADC/Inst_P_to_S/s_out_2_C_2 (INST_ADC/Inst_P_to_S/s_out_2_C_2)
+     LUT3:I1->O            1   0.250   0.000  INST_ADC/Inst_P_to_S/s_out_21 (INST_ADC/Inst_P_to_S/s_out_2)
+     FDP_1:D                   0.074          INST_ADC/Inst_P_to_S/s_out_1
+    ----------------------------------------
+    Total                      1.639ns (0.849ns logic, 0.790ns route)
+                                       (51.8% logic, 48.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK_12MHZ'
+  Total number of paths / destination ports: 35 / 35
+-------------------------------------------------------------------------
+Offset:              4.665ns (Levels of Logic = 2)
+  Source:            RESET (PAD)
+  Destination:       INST_ADC/CH_ADD_1 (FF)
+  Destination Clock: CLK_12MHZ rising 0.1X
+
+  Data Path: RESET to INST_ADC/CH_ADD_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.328   0.803  RESET_IBUF (LED_7_OBUF)
+     INV:I->O             50   0.255   1.820  LED_7_OBUF_BUFG_LUT1_INV_0 (LED_7_OBUF_BUFG_LUT1)
+     FDPE:PRE                  0.459          INST_ADC/en
+    ----------------------------------------
+    Total                      4.665ns (2.042ns logic, 2.623ns route)
+                                       (43.8% logic, 56.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'INST_LCD/CLK_400HZ'
+  Total number of paths / destination ports: 24 / 24
+-------------------------------------------------------------------------
+Offset:              4.665ns (Levels of Logic = 2)
+  Source:            RESET (PAD)
+  Destination:       INST_LCD/DATA_BUS_VALUE_7 (FF)
+  Destination Clock: INST_LCD/CLK_400HZ rising
+
+  Data Path: RESET to INST_LCD/DATA_BUS_VALUE_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.328   0.803  RESET_IBUF (LED_7_OBUF)
+     INV:I->O             50   0.255   1.820  LED_7_OBUF_BUFG_LUT1_INV_0 (LED_7_OBUF_BUFG_LUT1)
+     FDPE:PRE                  0.459          INST_LCD/next_command_0
+    ----------------------------------------
+    Total                      4.665ns (2.042ns logic, 2.623ns route)
+                                       (43.8% logic, 56.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'INST_ADC/sck2'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              2.009ns (Levels of Logic = 1)
+  Source:            ADC_IN (PAD)
+  Destination:       INST_ADC/Inst_SIPO_code/Mshreg_temp_1 (FF)
+  Destination Clock: INST_ADC/sck2 rising
+
+  Data Path: ADC_IN to INST_ADC/Inst_SIPO_code/Mshreg_temp_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.328   0.681  ADC_IN_IBUF (ADC_IN_IBUF)
+     SRLC16E:D                -0.060          INST_ADC/Inst_SIPO_code/Mshreg_temp_1
+    ----------------------------------------
+    Total                      2.009ns (1.328ns logic, 0.681ns route)
+                                       (66.1% logic, 33.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'INST_LCD/CLK_400HZ'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              4.118ns (Levels of Logic = 1)
+  Source:            INST_LCD/DATA_BUS_VALUE_7 (FF)
+  Destination:       DATA_BUS<7> (PAD)
+  Source Clock:      INST_LCD/CLK_400HZ rising
+
+  Data Path: INST_LCD/DATA_BUS_VALUE_7 to DATA_BUS<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             1   0.525   0.681  INST_LCD/DATA_BUS_VALUE_7 (INST_LCD/DATA_BUS_VALUE_7)
+     OBUF:I->O                 2.912          DATA_BUS_7_OBUF (DATA_BUS<7>)
+    ----------------------------------------
+    Total                      4.118ns (3.437ns logic, 0.681ns route)
+                                       (83.5% logic, 16.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK_12MHZ'
+  Total number of paths / destination ports: 11 / 10
+-------------------------------------------------------------------------
+Offset:              5.499ns (Levels of Logic = 2)
+  Source:            INST_ADC/sck2 (FF)
+  Destination:       SCK (PAD)
+  Source Clock:      CLK_12MHZ rising 0.1X
+
+  Data Path: INST_ADC/sck2 to SCK
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             14   0.525   1.127  INST_ADC/sck2 (INST_ADC/sck2)
+     LUT2:I1->O            1   0.254   0.681  INST_ADC/sck3 (SCK_OBUF)
+     OBUF:I->O                 2.912          SCK_OBUF (SCK)
+    ----------------------------------------
+    Total                      5.499ns (3.691ns logic, 1.808ns route)
+                                       (67.1% logic, 32.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'INST_ADC/sck1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.118ns (Levels of Logic = 1)
+  Source:            INST_ADC/Inst_P_to_S/serial_out (FF)
+  Destination:       ADC_OUT (PAD)
+  Source Clock:      INST_ADC/sck1 falling
+
+  Data Path: INST_ADC/Inst_P_to_S/serial_out to ADC_OUT
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP_1:C->Q            1   0.525   0.681  INST_ADC/Inst_P_to_S/serial_out (INST_ADC/Inst_P_to_S/serial_out)
+     OBUF:I->O                 2.912          ADC_OUT_OBUF (ADC_OUT)
+    ----------------------------------------
+    Total                      4.118ns (3.437ns logic, 0.681ns route)
+                                       (83.5% logic, 16.5% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Delay:               5.080ns (Levels of Logic = 2)
+  Source:            SLIDE_SW<2> (PAD)
+  Destination:       LED<6> (PAD)
+
+  Data Path: SLIDE_SW<2> to LED<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   1.328   0.840  SLIDE_SW_2_IBUF (LED_6_OBUF)
+     OBUF:I->O                 2.912          LED_6_OBUF (LED<6>)
+    ----------------------------------------
+    Total                      5.080ns (4.240ns logic, 0.840ns route)
+                                       (83.5% logic, 16.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK_12MHZ
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_12MHZ      |    4.943|         |         |         |
+INST_ADC/sck2  |    1.439|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock INST_ADC/Inst_P_to_S/GND_114_o_p_in[2]_AND_7_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_12MHZ      |         |         |    3.011|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock INST_ADC/Inst_P_to_S/GND_114_o_p_in[3]_AND_5_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_12MHZ      |         |         |    2.977|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock INST_ADC/sck1
+----------------------------------------------+---------+---------+---------+---------+
+                                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------------------+---------+---------+---------+---------+
+CLK_12MHZ                                     |         |         |    3.043|         |
+INST_ADC/Inst_P_to_S/GND_114_o_p_in[2]_AND_7_o|         |         |    1.800|         |
+INST_ADC/Inst_P_to_S/GND_114_o_p_in[3]_AND_5_o|         |         |    1.800|         |
+INST_ADC/sck1                                 |         |         |    1.639|         |
+----------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock INST_ADC/sck2
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+INST_ADC/sck2  |    1.820|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock INST_LCD/CLK_400HZ
+------------------+---------+---------+---------+---------+
+                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------+---------+---------+---------+---------+
+CLK_12MHZ         |   17.540|         |         |         |
+INST_LCD/CLK_400HZ|    5.318|         |         |         |
+RESET             |    5.934|         |         |         |
+------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 19.00 secs
+Total CPU time to Xst completion: 18.97 secs
+ 
+--> 
+
+Total memory usage is 247200 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   29 (   0 filtered)
+Number of infos    :   27 (   0 filtered)
+

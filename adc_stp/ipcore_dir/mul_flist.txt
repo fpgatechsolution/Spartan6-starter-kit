@@ -1,0 +1,14 @@
+# Output products list for <mul>
+mul.asy
+mul.gise
+mul.ngc
+mul.sym
+mul.v
+mul.veo
+mul.xco
+mul.xise
+mul\doc\floating_point_ds335.pdf
+mul\doc\floating_point_v5_0_readme.txt
+mul\doc\floating_point_v5_0_vinfo.html
+mul_flist.txt
+mul_xmdf.tcl

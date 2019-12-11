@@ -1,0 +1,48 @@
+V3 40
+FL "E:/nish/KITCODE/lcd_3a_200a/adc3204 - Copy/lcd_3a_adc3204/adc_12bit/adc.vhd" 2017/08/06.22:26:40 P.68d
+FL "E:/nish/KITCODE/lcd_3a_200a/adc3204 - Copy/lcd_3a_adc3204/adc_12bit/dcm.vhd" 2017/08/07.11:16:03 P.68d
+FL "E:/nish/KITCODE/lcd_3a_200a/adc3204 - Copy/lcd_3a_adc3204/adc_12bit/LCD_CNTROL.vhd" 2013/06/23.00:00:36 P.68d
+FL "E:/nish/KITCODE/lcd_3a_200a/adc3204 - Copy/lcd_3a_adc3204/adc_12bit/sipo.vhd" 2017/08/05.15:28:26 P.68d
+FL "E:/nish/KITCODE/lcd_3a_200a/adc3204 - Copy/lcd_3a_adc3204/adc_12bit/top.vhd" 2017/08/07.11:17:06 P.68d
+FL G:/reinfold/adc_stp/adc.vhd 2017/10/10.14:15:46 P.68d
+FL G:/reinfold/adc_stp/dcm.vhd 2017/08/07.11:16:04 P.68d
+FL G:/reinfold/adc_stp/LCD_CNTROL.vhd 2013/06/23.00:00:36 P.68d
+FL G:/reinfold/adc_stp/sipo.vhd 2017/08/05.15:28:26 P.68d
+FL G:/reinfold/adc_stp/st_mtr.vhd 2017/10/10.11:46:06 P.68d
+FL G:/reinfold/adc_stp/top.vhd 2017/10/10.12:36:58 P.68d
+FL H:/reinfold/adc_stp/adc.vhd 2017/10/10.14:15:46 P.68d
+EN work/adc 1507653780 FL H:/reinfold/adc_stp/adc.vhd PB ieee/std_logic_1164 1381692176 \
+      PB ieee/std_logic_arith 1381692177 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/adc/Behavioral 1507653781 \
+      FL H:/reinfold/adc_stp/adc.vhd EN work/adc 1507653780 CP P2S CP SIPO_code
+FL H:/reinfold/adc_stp/dcm.vhd 2017/08/07.11:16:04 P.68d
+EN work/dcm 1507653776 FL H:/reinfold/adc_stp/dcm.vhd PB ieee/std_logic_1164 1381692176 \
+      PB ieee/NUMERIC_STD 1381692181 LB UNISIM PH unisim/VCOMPONENTS 1381692182
+AR work/dcm/BEHAVIORAL 1507653777 \
+      FL H:/reinfold/adc_stp/dcm.vhd EN work/dcm 1507653776 CP BUFG CP IBUFG \
+      CP DCM_SP
+FL H:/reinfold/adc_stp/LCD_CNTROL.vhd 2013/06/23.00:00:36 P.68d
+EN work/LCD 1507653778 FL H:/reinfold/adc_stp/LCD_CNTROL.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/LCD/a 1507653779 \
+      FL H:/reinfold/adc_stp/LCD_CNTROL.vhd EN work/LCD 1507653778
+FL H:/reinfold/adc_stp/sipo.vhd 2017/08/05.15:28:26 P.68d
+EN work/SIPO_code 1507653774 FL H:/reinfold/adc_stp/sipo.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179 LB UNISIM PH unisim/VCOMPONENTS 1381692182
+AR work/SIPO_code/Behavioral 1507653775 \
+      FL H:/reinfold/adc_stp/sipo.vhd EN work/SIPO_code 1507653774
+FL H:/reinfold/adc_stp/st_mtr.vhd 2017/10/10.11:46:06 P.68d
+EN work/StepperMotor 1507653782 FL H:/reinfold/adc_stp/st_mtr.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/StepperMotor/bhe 1507653783 \
+      FL H:/reinfold/adc_stp/st_mtr.vhd EN work/StepperMotor 1507653782
+FL H:/reinfold/adc_stp/top.vhd 2017/10/10.22:11:46 P.68d
+EN work/TOP 1507653784 FL H:/reinfold/adc_stp/top.vhd PB ieee/std_logic_1164 1381692176 \
+      PB ieee/std_logic_arith 1381692177 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      LB UNISIM PH unisim/VCOMPONENTS 1381692182
+AR work/TOP/BEHAVIORAL 1507653785 \
+      FL H:/reinfold/adc_stp/top.vhd EN work/TOP 1507653784 CP dcm CP LCD \
+      CP binbcd16 CP ADC CP StepperMotor

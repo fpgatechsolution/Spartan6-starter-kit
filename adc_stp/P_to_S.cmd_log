@@ -1,0 +1,2 @@
+vhdtdtfi -lang verilog -prj adc_12bit -o E:/KITCODE/reinfold/adc_stp/P_to_S.vhi -lib work E:/KITCODE/reinfold/adc_stp//P2S.v -module P_to_S -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror 
+vhdtdtfi -lang verilog -prj adc_12bit -o E:/KITCODE/reinfold/adc_stp/P_to_S.vhi -lib work E:/KITCODE/reinfold/adc_stp//P2S.v -module P_to_S -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror 

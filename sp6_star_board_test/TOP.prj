@@ -1,0 +1,5 @@
+vhdl work "SEVEN_SIGMENT.vhd"
+vhdl work "pwm.vhd"
+vhdl work "LED_SHIFTER.vhd"
+vhdl work "LCD_CNTROL.vhd"
+vhdl work "top.vhd"

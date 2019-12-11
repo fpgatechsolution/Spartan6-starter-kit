@@ -1,0 +1,8 @@
+vhdl work "sipo.vhd"
+verilog work "P2S.v"
+vhdl work "st_mtr.vhd"
+vhdl work "LCD_CNTROL.vhd"
+vhdl work "dcm.vhd"
+verilog work "bintobcd.v"
+vhdl work "adc.vhd"
+vhdl work "top.vhd"
