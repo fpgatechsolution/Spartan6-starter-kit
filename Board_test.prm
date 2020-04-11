@@ -1,0 +1,17 @@
+PROMGEN: Xilinx Prom Generator P.20131013
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+promgen -w -p mcs -c FF -o E:\GIT\Spartan6-starter-kit//Board_test -s 1024 -u 0000 E:/GIT/Spartan6-starter-kit/board_test.bit -spi 
+
+PROM E:\GIT\Spartan6-starter-kit\Board_test.prm map: Wed Jan 29 22:23:30 2020
+
+Calculating PROM checksum with fill value ff
+
+Format        Mcs86 (32-bit)
+Size          1024K
+PROM start    0000:0000
+PROM end      000f:ffff
+PROM checksum 0aca86a0
+
+        Addr1        Addr2                     Date File(s)
+    0000:0000    0005:327b     Dec 10 22:45:54 2019 E:/GIT/Spartan6-starter-kit/board_test.bit
