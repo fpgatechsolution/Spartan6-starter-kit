@@ -1,0 +1,90 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 2 -n
+3 -fastpaths -xml WIFI_TOP.twx WIFI_TOP.ncd -o WIFI_TOP.twr WIFI_TOP.pcf -ucf
+top.ucf
+
+Design file:              WIFI_TOP.ncd
+Physical constraint file: WIFI_TOP.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-2 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock CLK_12MHZ
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+SW          |    6.405(R)|      SLOW  |   -2.729(R)|      FAST  |CLK12MHZ          |   0.000|
+            |    5.421(R)|      SLOW  |    0.167(R)|      SLOW  |CLK_100MHZ        |   0.000|
+            |    5.354(R)|      SLOW  |   -1.013(R)|      SLOW  |CLK_1MHZ          |   0.000|
+WIFI_RXD    |    1.254(R)|      SLOW  |   -0.118(R)|      SLOW  |CLK_100MHZ        |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock CLK_12MHZ to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+CS_ADC      |        11.793(R)|      SLOW  |         5.004(R)|      FAST  |CLK_1MHZ          |   0.000|
+SCK         |        14.237(R)|      SLOW  |         6.101(R)|      FAST  |CLK_1MHZ          |   0.000|
+TEST_LED<0> |        11.683(R)|      SLOW  |         4.949(R)|      FAST  |CLK_100MHZ        |   0.000|
+TEST_LED<1> |        10.538(R)|      SLOW  |         4.303(R)|      FAST  |CLK_100MHZ        |   0.000|
+TEST_LED<2> |        10.516(R)|      SLOW  |         4.257(R)|      FAST  |CLK_100MHZ        |   0.000|
+TEST_LED<3> |        10.286(R)|      SLOW  |         4.134(R)|      FAST  |CLK_100MHZ        |   0.000|
+TEST_LED<4> |        11.155(R)|      SLOW  |         4.670(R)|      FAST  |CLK_100MHZ        |   0.000|
+TEST_LED<6> |        10.733(R)|      SLOW  |         4.412(R)|      FAST  |CLK_100MHZ        |   0.000|
+TEST_LED<7> |        11.957(R)|      SLOW  |         5.059(R)|      FAST  |CLK_100MHZ        |   0.000|
+WIFI_ENABLE |        11.507(R)|      SLOW  |         4.847(R)|      FAST  |CLK_100MHZ        |   0.000|
+WIFI_TXD    |        13.036(R)|      SLOW  |         5.728(R)|      FAST  |CLK_100MHZ        |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock CLK_12MHZ
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_12MHZ      |    9.131|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+WIFI_RXD       |USB_TXD        |   12.277|
+---------------+---------------+---------+
+
+
+Analysis completed Sun Apr 19 21:11:55 2020 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 178 MB
+
+
+

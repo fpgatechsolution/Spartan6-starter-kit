@@ -1,0 +1,25 @@
+Release 14.7 Drc P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Sun Apr 19 21:12:05 2020
+
+drc -z WIFI_TOP.ncd WIFI_TOP.pcf
+
+WARNING:PhysDesignRules:372 - Gated clock. Clock net Inst_ADC/SCK2 is sourced by
+   a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   Inst_ADC/INST_P_TO_S/GND_18_o_p_in[2]_AND_146_o is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading
+   of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   Inst_ADC/INST_P_TO_S/GND_18_o_p_in[3]_AND_144_o is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading
+   of data into the flip-flop.
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   WIFI_TXD_PULLUP is set but the tri state is not configured. 
+INFO:PhysDesignRules:1861 - To achieve optimal frequency synthesis performance
+   with the CLKFX and CLKFX180 outputs of the DCM comp INST_DCM_CLK/dcm_sp_inst,
+   consult the device Data Sheet.
+DRC detected 0 errors and 4 warnings.  Please see the previously displayed
+individual error or warning messages for more details.

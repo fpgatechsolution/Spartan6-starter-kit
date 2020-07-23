@@ -1,0 +1,36 @@
+
+##############clock#############################
+NET CLK_12MHZ  LOC = P95  ; 
+NET CLK_12MHZ CLOCK_DEDICATED_ROUTE = FALSE;
+
+##############push button#######################
+NET sw  LOC = P105  ; ## sw1
+NET "sw" CLOCK_DEDICATED_ROUTE = FALSE;
+
+##############LED###############################
+NET TEST_LED<0> LOC=P26 ; 
+NET TEST_LED<1> LOC=P22 ;
+NET TEST_LED<2> LOC=P21 ;
+NET TEST_LED<3> LOC=P15 ;
+NET TEST_LED<4> LOC=P12 ;
+NET TEST_LED<5> LOC=P10 ;
+NET TEST_LED<6> LOC=P8  ;
+NET TEST_LED<7> LOC=P2  ;
+##############USB UART############################
+NET USB_RXD  LOC = P104 ;
+NET USB_TXD  LOC = P102 ;
+
+#######ESP 8266 interfacing on J9 connector ######
+NET WIFI_RXD  LOC = P41    ;#J9-2
+NET WIFI_TXD  LOC = P43 | pullup   ;#J9-1
+NET WIFI_ENABLE  LOC = P45 ;#J9-3
+
+##############SPI ADC Interfacing #################		
+NET RGB_LED<0>  LOC = P1 ; 
+NET RGB_LED<1>  LOC = P6 ; 
+NET RGB_LED<2>  LOC = P7; 
+
+
+NET BUZZER  LOC = P94  ; 
+
+NET RELAY  LOC = P97  ; 

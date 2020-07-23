@@ -1,0 +1,7 @@
+vhdtdtfi -prj ESP_8266 -o F:/ESP_8266/ESP8266_DRIVER.vhi -lib work F:/ESP_8266//esp8266_driver.vhd -module ESP8266_DRIVER -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror 
+vhdtdtfi -prj ESP_8266 -o F:/ESP_8266/ESP8266_DRIVER.vhi -lib work F:/ESP_8266//esp8266_driver.vhd -module ESP8266_DRIVER -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror 
+vhdtdtfi -prj ESP_8266 -o F:/ESP_8266/ESP8266_DRIVER.vhi -lib work F:/ESP_8266//esp8266_driver.vhd -module ESP8266_DRIVER -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror 
+vhdtdtfi -prj ESP_8266 -o F:/ESP_8266/ESP8266_DRIVER.vhi -lib work F:/ESP_8266//esp8266_driver.vhd -module ESP8266_DRIVER -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror 
+vhdtdtfi -prj ESP_8266 -o F:/ESP_8266/ESP8266_DRIVER.vhi -lib work F:/ESP_8266//esp8266_driver.vhd -module ESP8266_DRIVER -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror 
+vhdtdtfi -prj ESP_8266 -o F:/ESP_8266/ESP8266_DRIVER.vhi -lib work F:/ESP_8266//esp8266_driver.vhd -module ESP8266_DRIVER -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror 
+vhdtdtfi -prj ESP_8266 -o F:/ESP_8266/ESP8266_DRIVER.vhi -lib work F:/ESP_8266//esp8266_driver.vhd -module ESP8266_DRIVER -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror 

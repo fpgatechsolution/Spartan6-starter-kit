@@ -1,0 +1,7 @@
+vhdl work "Transmitter.vhd"
+vhdl work "Receiver.vhd"
+vhdl work "UART.vhd"
+vhdl work "ESP_FPGA_PACK.vhd"
+vhdl work "esp8266_driver.vhd"
+vhdl work "wifi_top.vhd"
+verilog work "ipcore_dir/dcm_clk.v"

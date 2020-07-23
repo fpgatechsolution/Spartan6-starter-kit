@@ -1,0 +1,3 @@
+vhdtdtfi -prj ESP_8266 -o F:/ESP_8266/hex_to_ascii.vhi -lib work F:/ESP_8266//hex_to_ascii.vhd -module hex_to_ascii -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror 
+vhdtdtfi -prj ESP_8266 -o F:/ESP_8266/hex_to_ascii.vhi -lib work F:/ESP_8266//hex_to_ascii.vhd -module hex_to_ascii -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror 
+vhdtdtfi -prj ESP_8266 -o F:/ESP_8266/hex_to_ascii.vhi -lib work F:/ESP_8266//hex_to_ascii.vhd -module hex_to_ascii -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror 

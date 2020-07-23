@@ -1,0 +1,68 @@
+xst -intstyle ise -ifn "F:/ESP_8266/WIFI_TOP.xst" -ofn "F:/ESP_8266/WIFI_TOP.syr" 
+xst -intstyle ise -ifn "F:/ESP_8266 IO control/WIFI_TOP.xst" -ofn "F:/ESP_8266 IO control/WIFI_TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -p xc6slx9-tqg144-2 "WIFI_TOP.ngc" WIFI_TOP.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o WIFI_TOP_map.ncd WIFI_TOP.ngd WIFI_TOP.pcf 
+par -w -intstyle ise -ol high -mt off WIFI_TOP_map.ncd WIFI_TOP.ncd WIFI_TOP.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml WIFI_TOP.twx WIFI_TOP.ncd -o WIFI_TOP.twr WIFI_TOP.pcf -ucf top.ucf 
+bitgen -intstyle ise -f WIFI_TOP.ut WIFI_TOP.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -p xc6slx9-tqg144-2 "WIFI_TOP.ngc" WIFI_TOP.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o WIFI_TOP_map.ncd WIFI_TOP.ngd WIFI_TOP.pcf 
+par -w -intstyle ise -ol high -mt off WIFI_TOP_map.ncd WIFI_TOP.ncd WIFI_TOP.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml WIFI_TOP.twx WIFI_TOP.ncd -o WIFI_TOP.twr WIFI_TOP.pcf -ucf top.ucf 
+bitgen -intstyle ise -f WIFI_TOP.ut WIFI_TOP.ncd 
+xst -intstyle ise -ifn "F:/ESP_8266 IO control/WIFI_TOP.xst" -ofn "F:/ESP_8266 IO control/WIFI_TOP.syr" 
+xst -intstyle ise -ifn "F:/ESP_8266 IO control/WIFI_TOP.xst" -ofn "F:/ESP_8266 IO control/WIFI_TOP.syr" 
+xst -intstyle ise -ifn "F:/ESP_8266 IO control/WIFI_TOP.xst" -ofn "F:/ESP_8266 IO control/WIFI_TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -p xc6slx9-tqg144-2 "WIFI_TOP.ngc" WIFI_TOP.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o WIFI_TOP_map.ncd WIFI_TOP.ngd WIFI_TOP.pcf 
+par -w -intstyle ise -ol high -mt off WIFI_TOP_map.ncd WIFI_TOP.ncd WIFI_TOP.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml WIFI_TOP.twx WIFI_TOP.ncd -o WIFI_TOP.twr WIFI_TOP.pcf -ucf top.ucf 
+bitgen -intstyle ise -f WIFI_TOP.ut WIFI_TOP.ncd 
+xst -intstyle ise -ifn "F:/ESP_8266 IO control/WIFI_TOP.xst" -ofn "F:/ESP_8266 IO control/WIFI_TOP.syr" 
+xst -intstyle ise -ifn "F:/ESP_8266 IO control/WIFI_TOP.xst" -ofn "F:/ESP_8266 IO control/WIFI_TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -p xc6slx9-tqg144-2 "WIFI_TOP.ngc" WIFI_TOP.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o WIFI_TOP_map.ncd WIFI_TOP.ngd WIFI_TOP.pcf 
+par -w -intstyle ise -ol high -mt off WIFI_TOP_map.ncd WIFI_TOP.ncd WIFI_TOP.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml WIFI_TOP.twx WIFI_TOP.ncd -o WIFI_TOP.twr WIFI_TOP.pcf -ucf top.ucf 
+bitgen -intstyle ise -f WIFI_TOP.ut WIFI_TOP.ncd 
+xst -intstyle ise -ifn "F:/ESP_8266 IO control/WIFI_TOP.xst" -ofn "F:/ESP_8266 IO control/WIFI_TOP.syr" 
+xst -intstyle ise -ifn "F:/ESP_8266 IO control/WIFI_TOP.xst" -ofn "F:/ESP_8266 IO control/WIFI_TOP.syr" 
+xst -intstyle ise -ifn "F:/ESP_8266 IO control/WIFI_TOP.xst" -ofn "F:/ESP_8266 IO control/WIFI_TOP.syr" 
+xst -intstyle ise -ifn "F:/ESP_8266 IO control/WIFI_TOP.xst" -ofn "F:/ESP_8266 IO control/WIFI_TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -p xc6slx9-tqg144-2 "WIFI_TOP.ngc" WIFI_TOP.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o WIFI_TOP_map.ncd WIFI_TOP.ngd WIFI_TOP.pcf 
+par -w -intstyle ise -ol high -mt off WIFI_TOP_map.ncd WIFI_TOP.ncd WIFI_TOP.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml WIFI_TOP.twx WIFI_TOP.ncd -o WIFI_TOP.twr WIFI_TOP.pcf -ucf top.ucf 
+bitgen -intstyle ise -f WIFI_TOP.ut WIFI_TOP.ncd 
+xst -intstyle ise -ifn "F:/ESP_8266 IO control/WIFI_TOP.xst" -ofn "F:/ESP_8266 IO control/WIFI_TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -p xc6slx9-tqg144-2 "WIFI_TOP.ngc" WIFI_TOP.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o WIFI_TOP_map.ncd WIFI_TOP.ngd WIFI_TOP.pcf 
+par -w -intstyle ise -ol high -mt off WIFI_TOP_map.ncd WIFI_TOP.ncd WIFI_TOP.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml WIFI_TOP.twx WIFI_TOP.ncd -o WIFI_TOP.twr WIFI_TOP.pcf -ucf top.ucf 
+bitgen -intstyle ise -f WIFI_TOP.ut WIFI_TOP.ncd 
+xst -intstyle ise -ifn "F:/ESP_8266 IO control/WIFI_TOP.xst" -ofn "F:/ESP_8266 IO control/WIFI_TOP.syr" 
+xst -intstyle ise -ifn "F:/ESP_8266 IO control/WIFI_TOP.xst" -ofn "F:/ESP_8266 IO control/WIFI_TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -p xc6slx9-tqg144-2 "WIFI_TOP.ngc" WIFI_TOP.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o WIFI_TOP_map.ncd WIFI_TOP.ngd WIFI_TOP.pcf 
+par -w -intstyle ise -ol high -mt off WIFI_TOP_map.ncd WIFI_TOP.ncd WIFI_TOP.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml WIFI_TOP.twx WIFI_TOP.ncd -o WIFI_TOP.twr WIFI_TOP.pcf -ucf top.ucf 
+bitgen -intstyle ise -f WIFI_TOP.ut WIFI_TOP.ncd 
+xst -intstyle ise -ifn "F:/ESP_8266 IO control/WIFI_TOP.xst" -ofn "F:/ESP_8266 IO control/WIFI_TOP.syr" 
+xst -intstyle ise -ifn "F:/ESP_8266 IO control/WIFI_TOP.xst" -ofn "F:/ESP_8266 IO control/WIFI_TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -p xc6slx9-tqg144-2 "WIFI_TOP.ngc" WIFI_TOP.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o WIFI_TOP_map.ncd WIFI_TOP.ngd WIFI_TOP.pcf 
+par -w -intstyle ise -ol high -mt off WIFI_TOP_map.ncd WIFI_TOP.ncd WIFI_TOP.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml WIFI_TOP.twx WIFI_TOP.ncd -o WIFI_TOP.twr WIFI_TOP.pcf -ucf top.ucf 
+bitgen -intstyle ise -f WIFI_TOP.ut WIFI_TOP.ncd 
+xst -intstyle ise -ifn "F:/ESP_8266 IO control/WIFI_TOP.xst" -ofn "F:/ESP_8266 IO control/WIFI_TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -p xc6slx9-tqg144-2 "WIFI_TOP.ngc" WIFI_TOP.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o WIFI_TOP_map.ncd WIFI_TOP.ngd WIFI_TOP.pcf 
+par -w -intstyle ise -ol high -mt off WIFI_TOP_map.ncd WIFI_TOP.ncd WIFI_TOP.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml WIFI_TOP.twx WIFI_TOP.ncd -o WIFI_TOP.twr WIFI_TOP.pcf -ucf top.ucf 
+bitgen -intstyle ise -f WIFI_TOP.ut WIFI_TOP.ncd 
+xst -intstyle ise -ifn "F:/ESP_8266 IO control/WIFI_TOP.xst" -ofn "F:/ESP_8266 IO control/WIFI_TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -p xc6slx9-tqg144-2 "WIFI_TOP.ngc" WIFI_TOP.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o WIFI_TOP_map.ncd WIFI_TOP.ngd WIFI_TOP.pcf 
+par -w -intstyle ise -ol high -mt off WIFI_TOP_map.ncd WIFI_TOP.ncd WIFI_TOP.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml WIFI_TOP.twx WIFI_TOP.ncd -o WIFI_TOP.twr WIFI_TOP.pcf -ucf top.ucf 
+bitgen -intstyle ise -f WIFI_TOP.ut WIFI_TOP.ncd 

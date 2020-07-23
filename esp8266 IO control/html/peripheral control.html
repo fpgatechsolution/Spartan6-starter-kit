@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<title>ESP8266 LED Control</title>
+	</head>
+	<body BGCOLOR="DE16DE">
+	<body>
+
+
+	<h1>Welcome to FPGATECHSOLUTION</h1>
+	<!-- in the <button> tags below the ID attribute is the value sent to the arduino -->
+
+	<h2>Toggle GP LED</h2>
+	<button id="001" class="led">Toggle TL1 LED</button> <!-- button for pin 11 -->
+	<button id="002" class="led">Toggle TL2 LED</button> <!-- button for pin 12 -->
+	<button id="003" class="led">Toggle TL3 LED</button> <!-- button for pin 13 -->
+	<button id="004" class="led">Toggle TL4 LED</button> <!-- button for pin 11 -->
+	<button id="005" class="led">Toggle TL5 LED</button> <!-- button for pin 12 -->
+	<button id="006" class="led">Toggle TL6 LED</button> <!-- button for pin 13 -->
+	<button id="007" class="led">Toggle TL7 LED</button> <!-- button for pin 11 -->
+	<button id="008" class="led">Toggle TL8 LED</button> <!-- button for pin 12 -->
+	
+	<P> </P>
+	<h2>Toggle RELAY & BUZZER </h2>
+	<button id="009" class="led">Toggle RELAY </button> <!-- button for pin 13 -->
+	<button id="010" class="led">Toggle BUZZER</button> <!-- button for pin 13 -->
+	
+	<P> </P>
+	<h2>Toggle RGB LED </h2>
+	
+	<button id="011" class="led">Toggle RED</button> <!-- button for pin 13 -->
+	<button id="012" class="led">Toggle GREEN</button> <!-- button for pin 13 -->
+	<button id="013" class="led">Toggle BLUE</button> <!-- button for pin 13 -->
+	
+	<P> </P>
+	<P> </P>
+	<h1>FREE WhatsApp Support for all FPGA related activity</h1>
+	<h1>WhatsApp +919665889991</h1>
+	
+	<!--button id="XXX" class="led">Toggle Pin XXX</button> <!-- button for pin 13 -->	
+	<script src="jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".led").click(function(){
+				var p = $(this).attr('id'); // get id value (i.e. pin13, pin12, or pin11)
+				// send HTTP GET request to the IP address with the parameter "pin" and value "p", then execute the function
+				$.get("http://192.168.43.212:80/", {PIN:p}); // execute get request
+			});
+		});
+	</script>
+	</body>
+</html>
